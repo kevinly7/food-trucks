@@ -67,4 +67,4 @@ var hotdawgs = [
         item: 'Ketchup',
         type: 'self topping'
     }
-]
+];
