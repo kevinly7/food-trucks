@@ -29,3 +29,15 @@ label {
 table {
     margin: 10px;
 }
+
+#header {
+    padding-top: 5em;
+}
+
+#filters {
+    padding-right: 2em;
+}
+
+.checkout {
+    background-color: beige;
+}
