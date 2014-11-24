@@ -116,6 +116,12 @@ footer {
     display: inline;
     padding: 0;
 }
+.food {
+    padding: 5px;
+}
+.food:hover {
+    background-color: rgba(3, 3, 3, 0.3);
+}
 
 @media (min-width: 992px) {
     body {

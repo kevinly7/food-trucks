@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <main class="container-fluid" ng-app="FoodApp" ng-controller="FoodController">
+        <main class="container" ng-app="FoodApp" ng-controller="FoodController">
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -59,26 +59,18 @@
 
             <section id="menu" class="row">
                 <h2>Entrees</h2>
-                <div class="col-md-6" ng-repeat="s in siganos | filter: {type:'entree'}">
+                <div class="col-md-6 food" ng-repeat="s in siganos | filter: {type:'entree'}">
                     <dl>
-                        <dt>{{s.item}}<a style="float: right;" href="">{{s.price | currency : '$' : 2}}</a></dt>
+                        <dt>{{s.item}}<p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
                         <dd>{{s.description}}</dd>
                     </dl>
                 </div>
             </section>
 
-            <!--<section id="menu" class="row">-->
-                <!--<h2>Meats</h2>-->
-                <!--<dt class="col-md-3">Chicken Tinga</dt>-->
-                <!--<dt class="col-md-3">Carne Asada</dt>-->
-                <!--<dt class="col-md-3">Pork Carnitas</dt>-->
-                <!--<dt class="col-md-3">Vegan Gardien Chicken</dt>-->
-            <!--</section>-->
-
             <section id="menu" class="row">
                 <h2>Sides</h2>
                 <dl class="col-md-6" ng-repeat="s in siganos | filter: {type:'Sides'}">
-                    <dt>{{s.item}} <a style="float: right;" href="">{{s.price | currency : '$' : 2}}</a></dt>
+                    <dt class="food">{{s.item}} <p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
                 </dl>
             </section>
 
@@ -86,8 +78,8 @@
             <section id="menu" class="row">
                 <h2>Daily Special</h2>
                 <div class="col-md-12">
-                    <dl>
-                        <dt>Item Name<a style="float: right;" href="">price</a></dt>
+                    <dl class="food">
+                        <dt>Item Name<p style="float: right;">price</p></dt>
                         <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quia quod totam vitae! Aspernatur eius quam sed veniam voluptate. Accusantium autem culpa dolorem ducimus, eveniet harum illo nisi pariatur tempora.</dd>
                     </dl>
                 </div>
@@ -95,12 +87,12 @@
 
             <section id="menu" class="row">
                 <h2>Cold Drinks</h2>
-                <dl class="col-md-6">
-                    <dt>Soda, Juice, Water <a style="float: right;" href="">$1.05</a></dt>
+                <dl class="col-md-6 food">
+                    <dt>Soda, Juice, Water <p style="float: right;">$1.05</p></dt>
                     <dd>Coke, Diet Coke, Coke Zero, Sprite, Grape Fanta, Orange Fanta, Lemonade, Bottled Water</dd>
                 </dl>
-                <dl class="col-md-6">
-                    <dt>Mexican Soda <a style="float: right;" href="">$1.79</a></dt>
+                <dl class="col-md-6 food">
+                    <dt>Mexican Soda <p style="float: right;">$1.79</p></dt>
                     <dd>Coke or Orange Fanta</dd>
                 </dl>
             </section>
