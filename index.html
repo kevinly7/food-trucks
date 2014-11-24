@@ -1,84 +1,59 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>UW Street Food</title>
+        <meta name="author" content="Kristen">
+        <meta name="description" content ="Food Trucks at the Univeristy of Washington">
 
-		<!-- hotlink to Bootstrap's minified stylesheet -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/main.css"/>
-	</head>
+        <link rel="stylesheet" href="main.css">
+        <link rel="icon" href="img/foodtruck.png">
+        
+        <title>Food Trucks @ UW</title>
 
-	<body>
-		<main class="container">
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-				<div class="container-fluid">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="#">Husky Food Trucks</a>
-					</div>
+    </head>
 
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="menu.html">Menu</a></li>
-							<li><a href="queue.html">My Orders</a></li>
-						</ul>
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>
+    <body>
+        <main>
+            <div class="container-fluid">
+                <header class="row">
+                    <h1>UW Street Food</h1>
+                    <p class="headline">Beat the crowd. Order now. </p>
+                </header>
 
-			<header>
-				<h1>UW Street Food</h1>
+                <section id="menus">
+                    <div class="row">
+                        <div class="col-md-6" id="first">
+                            <img src="img/motosurf.png" alt="Motosurf">
+                             <img src="img/siganos.png" alt="Siganos">
+                        </div>
+                        <div class="col-md-6" id="second">
+                            <img src="img/bbq.png" alt="Red Square Barbecue">
+                            <img src="img/hotdawgs.png" alt="Hot Dawgs">
+                        </div>
+                    </div>
 
-<!-- 				<nav>
-					<ul>
-						<li><a href="#order">ORDER HERE!</a></li>
-						<li><a href="#motosuf">Motosurf</a></li>
-						<li><a href="#bbq">Red Square BBQ & Hot Dawgs</a></li>
-						<li><a href="#siganos">Siganos</a></li>
-					</ul>
-				</nav> -->
+                </section>
 
-			</header>
+                <section id="about">
+                    <h2>How It Works</h2>
+                    <p>Order from any of the food trucks in Red Square from this page. Click each logo in order to see the menu. Once you make your selections, your orders will be put in the queue. Go and claim your food when it is ready. Finally, say NO to the rain and YES to enjoying delicious food while still being dry. </p>
 
-			<section class="row">
-				<div class="col-md-4">
-					<h3 id="motosurf">Motosurf</h3>
-					<p>
-						Plate lunches and tasty bites of Hawaiian, Korean and Pacific island street foods like Spam musubi, Kahlua pig sliders, Korean barbecued chicken and mac salad. <br>
-						<a href="menus/Motosurf-Breakfast-Menu.pdf">View Breakfast Menu</a>
-						<a href="menus/Motosurf-Lunch-Menu.pdf">View Lunch Menu</a>
-					</p>
-				</div>
+                </section>
 
-				<div class="col-md-4">
-					<h3 id="bbq">Red Square BBQ & Hot Dawgs</h3>
-					<p>
-						Barbecue sandwiches and sliders with house-smoked savory barbecued meats. We've also got all-beef kosher dogs, Field Roast vegan sausage and Italian chicken sausage with a variety of fresh, signature relishes and toppings. Still hungry? We’ve also got sliders, ribs, mac and cheese and classic barbecue side dishes. <br>
-						<a href="menus/RedSquare-BBQ-Menu.pdf">View Menu</a>
-					</p>
-				</div>
-
-				<div class="col-md-4">
-					<h3 id="siganos">Siganos</h3>
-					<p>
-						UW's very own taco truck! Enjoy street tacos and tortas topped with savory chicken tinga, pork carnitas, carne asada beef and vegan gardien chicken. We have other south-of-the-border offerings like chips and salsa, black beans, spicy tots with chipotle ranch dressing and churros. <br>
-						<a href="menus/Siganos-Menu.pdf">View Menu</a>
-					</p>
-				</div>
-
-			</section>
-		</main>
-	</body>
+                <footer class="row">
+                    <p>
+                        <a href="https://www.facebook.com/uwdining"><img class="logo" src="img/facebook.png" alt="Facebook"></a>
+                        <a href="https://twitter.com/uw_dining"><img class="logo" src="img/twitter.png" alt="Twitter"></a> 
+                    </p>   
+                    <p><i>&copy; 2014, Dream Team</i></p>         
+                </footer>
+            </div>            
+        </main>
+        <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    </body>
 </html>
+
