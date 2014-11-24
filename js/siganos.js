@@ -101,5 +101,4 @@ var siganos = [
         price: 1.79,
         type: 'Drinks'
     }
-
 ];

@@ -54,9 +54,9 @@ header {
     color: #FFFFFF;
 }
 
-#tag-line {
-    display: none;
-}
+/*#tag-line {*/
+    /*display: none;*/
+/*}*/
 
 #menu {
     background-color: rgba(207, 205, 140, 0.5);
@@ -80,26 +80,39 @@ footer {
     text-align: right;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-}
+/*nav ul {*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
 
-nav li {
-    list-style-type: none;
-    display: inline-block;
-    margin-right: 1em;
-}
+/*nav li {*/
+    /*list-style-type: none;*/
+    /*display: inline-block;*/
+    /*margin-right: 1em;*/
+/*}*/
 
-nav a:link, nav a:visited {
-    color:#55E;
-}
+/*nav a:link, nav a:visited {*/
+    /*color:#55E;*/
+/*}*/
 
-nav a:hover, nav a:focus {
-    color: #00E;
-}
+/*nav a:hover, nav a:focus {*/
+    /*color: #00E;*/
+/*}*/
 
 .col-md-6 {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+.col-md-12 {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+#meatType {
+    display: inline;
     padding: 0;
 }
 
@@ -118,20 +131,27 @@ nav a:hover, nav a:focus {
         margin-right: 20px;
     }
 
-    #tag-line {
-        font-size: 120%;
-        color: #EEEEEE;
-        margin: 0;
-        display: inline;
-    }
+    /*#tag-line {*/
+        /*font-size: 120%;*/
+        /*color: #EEEEEE;*/
+        /*margin: 0;*/
+        /*display: inline;*/
+    /*}*/
 
     header {
         position: relative;
     }
 
-    nav {
+    /*nav {*/
+        /*position: absolute;*/
+        /*top: 10px;*/
+        /*right: 10px;*/
+    /*}*/
+
+    #meat {
         position: absolute;
-        top: 10px;
+        bottom: 10px;
         right: 10px;
+        font-weight: 500;
     }
 }
