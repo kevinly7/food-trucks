@@ -4,13 +4,15 @@ var siganos = [
         item: 'Tacos',
         price: 1.75,
         type: 'entree',
-        description: 'Choice of meat served on a warm corn tortilla, topped with white onion, cilantro, and radish'
+        description: 'Choice of meat served on a warm corn tortilla, topped with white onion, cilantro, and radish',
+        truck: 'siganos'
     },
     {
         item: 'Tortas',
         price: 5.25,
         type: 'entree',
-        description: 'Choice of meat served on an authentic torta roll, topped with pickled onion, cilantro, shaved cabbage, and avocado lime mayo'
+        description: 'Choice of meat served on an authentic torta roll, topped with pickled onion, cilantro, shaved cabbage, and avocado lime mayo',
+        truck: 'siganos'
     },
     {
         item: 'Chicken Tinga',
@@ -31,71 +33,85 @@ var siganos = [
     {
         item: 'Chips And Salsa',
         price: 2.00,
-        type: 'Sides'
+        type: 'Sides',
+        truck: 'siganos'
     },
     {
         item: 'Cilantro-lime Rice',
         price: 1.75,
-        type: 'Sides'
+        type: 'Sides',
+        truck: 'siganos'
     },
     {
         item: 'Spicy Tots with Chipotle Ranch',
         price: 2.50,
-        type: 'Sides'
+        type: 'Sides',
+        truck: 'siganos'
     },
     {
         item: 'Vegan Black Beans',
         price: 1.75,
-        type: 'Sides'
+        type: 'Sides',
+        truck: 'siganos'
     },
     {
         item: 'Coke',
         price: 1.05,
-        type: 'Drinks'
+        type: 'Drinks',
+        truck: 'siganos'
     },
     {
         item: 'Diet Coke',
         price: 1.05,
-        type: 'Drinks'
+        type: 'Drinks',
+        truck: 'siganos'
     },
     {
         item: 'Coke Zero',
         price: 1.05,
-        type: 'Drinks'
+        type: 'Drinks',
+        truck: 'siganos'
     },
     {
         item: 'Sprite',
         price: 1.05,
-        type: 'Drinks'
+        type: 'Drinks',
+        truck: 'siganos'
     },
     {
         item: 'Lemonade',
         price: 1.05,
-        type: 'Drinks'
+        type: 'Drinks',
+        truck: 'siganos'
     },
     {
         item: 'Grape Fanta',
         price: 1.05,
-        type: 'Drinks'
+        type: 'Drinks',
+        truck: 'siganos'
     },
     {
         item: 'Orange Fanta',
         price: 1.05,
-        type: 'Drinks'
+        type: 'Drinks',
+        truck: 'siganos'
     },
     {
         item: 'Water',
         price: 1.05,
-        type: 'Drinks'
+        type: 'Drinks',
+        truck: 'siganos'
     },
     {
         item: 'Mexican Coke',
         price: 1.79,
-        type: 'Drinks'
+        type: 'Drinks',
+        truck: 'siganos'
     },
     {
         item: 'Mexican Orange Fanta',
         price: 1.79,
-        type: 'Drinks'
+        type: 'Drinks',
+        truck: 'siganos'
     }
 ];

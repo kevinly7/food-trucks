@@ -7,19 +7,22 @@ var hotdawgs = [
         item: 'Kosher Beef Frank',
         price: 4.00,
         type: 'Dawgs',
-        description: "1/4 lb. of 100% pure kosher beef. Nothing artificial. We're talking Hebrew National here. "
+        description: "1/4 lb. of 100% pure kosher beef. Nothing artificial. We're talking Hebrew National here. ",
+        truck: 'hotdawgs'
     },
     {
         item: 'Italian Chicken Sausage',
         price: 4.50,
         type: 'Dawgs',
-        description: "Fresh garlic, fennel, and italian herbs. By Seattle's Cascioppo Brothers"
+        description: "Fresh garlic, fennel, and italian herbs. By Seattle's Cascioppo Brothers",
+        truck: 'hotdawgs'
     },
     {
         item: 'Vegan Apple-Sage Field Roast Sausage',
         price: 4.25,
         type: 'Dawgs',
-        description: 'Made in Seattle. Infused with Sage, Ginger, Granny Smith Apples and Yukon Gold potatoes'
+        description: 'Made in Seattle. Infused with Sage, Ginger, Granny Smith Apples and Yukon Gold potatoes',
+        truck: 'hotdawgs'
     },
     {
         item: 'Balsamic Grilled Onion Relish',

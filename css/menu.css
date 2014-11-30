@@ -121,6 +121,7 @@ footer {
 }
 .food:hover {
     background-color: rgba(3, 3, 3, 0.3);
+    cursor: pointer;
 }
 
 @media (min-width: 992px) {
