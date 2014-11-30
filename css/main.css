@@ -16,6 +16,14 @@ body {
 	color: #FFFFFF;
 }
 
+.modal-header {
+	color: black;
+}
+
+.modal-body {
+	color: black;
+}
+
 header {
 	background-color: #3D007A;
 	padding: 0.5em;
@@ -30,8 +38,12 @@ header {
 	margin-bottom: 1em;
 }
 
-h1 { 
+h1 {
 	font-size: 150%;
+}
+
+#menus h1 {
+	text-align: center;
 }
 
 footer {
@@ -56,12 +68,21 @@ img {
 
 #about { 
 	text-align: center;
+	background-color: rgba(255, 215, 0, 0.1);
 }
 
 .logo { 
 	height: 10%;
 	width: 10%;
 	display: inline-block;
+}
+
+.uw-purple {
+	background-color: purple;
+}
+
+.uw-yellow {
+	background-color: gold;
 }
 
 /*if bigger screen do this*/
@@ -79,12 +100,25 @@ img {
 	.tag-line {
 		display: inline-block;  
 	}
-	#first img { 
+
+	#first img{
 		float: right;
 		clear:both;
 		margin-top: 1em;
 	}
-	#second img { 
+
+	#second img{
+		float: left;
+		clear:both;
+		margin-top: 1em;
+	}
+	#third img{
+		float: right;
+		clear:both;
+		margin-top: 1em;
+	}
+
+	#fourth img{
 		float: left;
 		clear:both;
 		margin-top: 1em;
