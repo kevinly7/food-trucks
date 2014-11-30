@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +10,20 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/menu.css">
         <!--<link rel="shortcut icon" href="img/pizza-icon.png">-->
+        <script src="lib/angular-1.3.1/angular.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     </head>
 
     <body>
-        <main class="container-fluid">
+        <main class="container" ng-app="FoodApp" ng-controller="FoodController">
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -31,7 +41,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="about.html">About</a></li>
                             <li class="active"><a href="menu.html">Menu</a></li>
                             <li><a href="queue.html">My Orders</a></li>
                         </ul>
@@ -58,38 +68,18 @@
 
             <section id="menu" class="row">
                 <h2>Entrees</h2>
-                <div class="col-md-6">
+                <div class="col-md-6 food" ng-repeat="s in siganos | filter: {type:'entree'}">
                     <dl>
-                        <dt>Tacos<a style="float: right;" href="">price</a></dt>
-                        <dd>Choice of meat served on a warm corn tortilla, topped with white onion, cilantro and radish</dd>
-                    </dl>
-                </div>
-                <div class="col-md-6">
-                    <dl>
-                        <dt>Tortas <a style="float: right;" href="">price</a></dt>
-                        <dd>Choice of meat served on an authentic torta roll, topped with pickled onion, cilantro, shaved cabbage and avocado lime mayo</dd>
+                        <dt>{{s.item}}<p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
+                        <dd>{{s.description}}</dd>
                     </dl>
                 </div>
             </section>
 
-            <!--<section id="menu" class="row">-->
-                <!--<h2>Meats</h2>-->
-                <!--<dt class="col-md-3">Chicken Tinga</dt>-->
-                <!--<dt class="col-md-3">Carne Asada</dt>-->
-                <!--<dt class="col-md-3">Pork Carnitas</dt>-->
-                <!--<dt class="col-md-3">Vegan Gardien Chicken</dt>-->
-            <!--</section>-->
-
             <section id="menu" class="row">
                 <h2>Sides</h2>
-                <dl class="col-md-6">
-                    <dt>Chips and salsa <a style="float: right;" href="">price</a></dt>
-                    <dt>Clinatro-lime rice <a style="float: right;" href="">price</a></dt>
-                </dl>
-
-                <dl class="col-md-6">
-                    <dt>Spicy tots with Chipotle Ranch <a style="float: right;" href="">price</a></dt>
-                    <dt>Vegan black beans <a style="float: right;" href="">price</a></dt>
+                <dl class="col-md-6" ng-repeat="s in siganos | filter: {type:'Sides'}">
+                    <dt class="food">{{s.item}} <p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
                 </dl>
             </section>
 
@@ -97,8 +87,8 @@
             <section id="menu" class="row">
                 <h2>Daily Special</h2>
                 <div class="col-md-12">
-                    <dl>
-                        <dt>Item Name<a style="float: right;" href="">price</a></dt>
+                    <dl class="food">
+                        <dt>Item Name<p style="float: right;">price</p></dt>
                         <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quia quod totam vitae! Aspernatur eius quam sed veniam voluptate. Accusantium autem culpa dolorem ducimus, eveniet harum illo nisi pariatur tempora.</dd>
                     </dl>
                 </div>
@@ -106,21 +96,22 @@
 
             <section id="menu" class="row">
                 <h2>Cold Drinks</h2>
-                <dl class="col-md-6">
-                    <dt>Soda, Juice, Water <a style="float: right;" href="">price</a></dt>
+                <dl class="col-md-6 food">
+                    <dt>Soda, Juice, Water <p style="float: right;">$1.05</p></dt>
                     <dd>Coke, Diet Coke, Coke Zero, Sprite, Grape Fanta, Orange Fanta, Lemonade, Bottled Water</dd>
                 </dl>
-                <dl class="col-md-6">
-                    <dt>Mexican Soda <a style="float: right;" href="">price</a></dt>
+                <dl class="col-md-6 food">
+                    <dt>Mexican Soda <p style="float: right;">$1.79</p></dt>
                     <dd>Coke or Orange Fanta</dd>
                 </dl>
             </section>
 
             <footer class="row">
-                <p>&copy; 2014, Dawg Pizza, <a href="mailto:info@dawgpizza.com">info@dawgpizza.com</a></p>
+                <p>&copy; 2014, UW Food Trucks, <a href="mailto:foodtrucks@uw.edu">foodtrucks@uw.edu</a></p>
                 <p><a href=#> Back to Top &uarr;</a></p>
             </footer>
         </main>
-        <script> src="js/siganos.js"</script>
+        <script src="js/siganos.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>

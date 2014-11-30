@@ -5,55 +5,177 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="author" content="Kristen">
-        <meta name="description" content ="Food Trucks at the Univeristy of Washington">
+        <meta name="description" content ="Food Trucks at the University of Washington">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="main.css">
-        <link rel="icon" href="img/foodtruck.png">
-        
         <title>Food Trucks @ UW</title>
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" href="img/foodtruck.png">
     </head>
 
     <body>
-        <main>
+        <main class="container-fluid">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Husky Food Trucks</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="queue.html">My Orders</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
             <div class="container-fluid">
                 <header class="row">
                     <h1>UW Street Food</h1>
-                    <p class="headline">Beat the crowd. Order now. </p>
+                    <p class="headline">Beat the crowd. Order now.</p>
                 </header>
 
                 <section id="menus">
                     <div class="row">
-                        <div class="col-md-6" id="first">
-                            <img src="img/motosurf.png" alt="Motosurf">
-                             <img src="img/siganos.png" alt="Siganos">
-                        </div>
-                        <div class="col-md-6" id="second">
-                            <img src="img/bbq.png" alt="Red Square Barbecue">
-                            <img src="img/hotdawgs.png" alt="Hot Dawgs">
-                        </div>
+                        <h1>Start by selecting from a food truck below</h1>
                     </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6" id="first">
+                                <img class="img-thumbnail" src="img/motosurf.png" alt="Motosurf" data-toggle="modal" data-target="#motosurf-modal">
+                            </div>
+                            <div class="col-md-6" id="second">
+                                <img class="img-thumbnail" src="img/siganos.png" alt="Siganos" data-toggle="modal" data-target="#siganos-modal">
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col-md-6" id="third">
+                                <img class="img-thumbnail" src="img/bbq.png" alt="Red Square Barbecue" data-toggle="modal" data-target="#red-square-bbq-modal">
+                            </div>
+                            <div class="col-md-6" id="fourth">
+                                <img class="img-thumbnail" src="img/hotdawgs.png" alt="Hot Dawgs" data-toggle="modal" data-target="#hot-dawgs-modal">
+                            </div>
+                        </div>
+
+                    </div>
                 </section>
 
+
+        <!--    MODAL FOR MENUS       -->
+
+                <!-- Modal for motosurf-->
+                <div class="modal fade" id="motosurf-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h3 class="modal-title" id="myModalLabel">Motosurf</h3>
+                            </div>
+                            <div class="modal-body">
+                                <h1>Motosurf</h1>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default uw-yellow" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary uw-purple">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal for siganos -->
+                <div class="modal fade" id="siganos-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h3 class="modal-title" id="myModalLabel">Siganos</h3>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default uw-yellow" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary uw-purple">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal for Red Square BBQ-->
+                <div class="modal fade" id="red-square-bbq-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h3 class="modal-title" id="myModalLabel">Modal title</h3>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default uw-yellow" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary uw-purple">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal for Hot Dawgs -->
+                <div class="modal fade" id="hot-dawgs-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h3 class="modal-title" id="myModalLabel">Modal title</h3>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default uw-yellow" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary uw-purple">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <section id="about">
-                    <h2>How It Works</h2>
-                    <p>Order from any of the food trucks in Red Square from this page. Click each logo in order to see the menu. Once you make your selections, your orders will be put in the queue. Go and claim your food when it is ready. Finally, say NO to the rain and YES to enjoying delicious food while still being dry. </p>
+                    <div class="container">
+                        <h2>How It Works</h2>
+                        <p>Order from any of the food trucks in Red Square from this page. Click each logo in order to see the menu. Once you make your selections, your orders will be put in the queue. Go and claim your food when it is ready. Finally, say NO to the rain and YES to enjoying delicious food while still being dry. </p>
+                    </div>
 
                 </section>
 
                 <footer class="row">
                     <p>
                         <a href="https://www.facebook.com/uwdining"><img class="logo" src="img/facebook.png" alt="Facebook"></a>
-                        <a href="https://twitter.com/uw_dining"><img class="logo" src="img/twitter.png" alt="Twitter"></a> 
-                    </p>   
-                    <p><i>&copy; 2014, Dream Team</i></p>         
+                        <a href="https://twitter.com/uw_dining"><img class="logo" src="img/twitter.png" alt="Twitter"></a>
+                    </p>
+                    <p><i>&copy; 2014, Dream Team</i></p>
                 </footer>
-            </div>            
+            </div>
         </main>
-        <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/lightbox.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!--<script src="js/lightbox.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.7.0/bootstrap-lightbox.min.css"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     </body>
 </html>
 

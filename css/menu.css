@@ -5,6 +5,7 @@ body {
     font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 300;
+    padding-top: 70px;
 }
 
 a:link, a:visited {
@@ -114,6 +115,12 @@ footer {
 #meatType {
     display: inline;
     padding: 0;
+}
+.food {
+    padding: 5px;
+}
+.food:hover {
+    background-color: rgba(3, 3, 3, 0.3);
 }
 
 @media (min-width: 992px) {
