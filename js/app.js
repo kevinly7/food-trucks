@@ -1,5 +1,6 @@
 "use strict";
 
+<<<<<<< HEAD
 var itemsUrl = 'https://api.parse.com/1/classes/items';
 
 //create new angular module
@@ -61,4 +62,10 @@ angular.module('FoodApp', [])
                     //nothing needed
                 })
         }
+=======
+//create new angular module
+angular.module('FoodApp', [])
+    .controller('FoodController', function($scope) {
+        $scope.siganos = siganos;
+>>>>>>> b58111851b065f90c7715eb83116ca85f73b2a15
     });

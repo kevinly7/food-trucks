@@ -69,7 +69,11 @@
 
             <section id="menu" class="row">
                 <h2>Entrees</h2>
+<<<<<<< HEAD
                 <div class="col-md-6 food" ng-repeat="s in siganos | filter: {type:'entree'}" ng-click="additem(s)">
+=======
+                <div class="col-md-6 food" ng-repeat="s in siganos | filter: {type:'entree'}">
+>>>>>>> b58111851b065f90c7715eb83116ca85f73b2a15
                     <dl>
                         <dt>{{s.item}}<p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
                         <dd>{{s.description}}</dd>
@@ -80,6 +84,7 @@
             <section id="menu" class="row">
                 <h2>Sides</h2>
                 <dl class="col-md-6" ng-repeat="s in siganos | filter: {type:'Sides'}" ng-click="additem(s)">
+                <dl class="col-md-6" ng-repeat="s in siganos | filter: {type:'Sides'}">
                     <dt class="food">{{s.item}} <p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
                 </dl>
             </section>
