@@ -119,7 +119,7 @@
                                 <!--drinks-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <label for="drinks" id="drinks" class="col-sm-2 control-label"><h2 style="color:#003366">Drinks</h2></label>
+                                        <label for="drinks" id="drinks" class="col-sm-2 control-label"><h2 style="color:#003366;">Beverages</h2></label>
                                         <div id="test3" class="col-sm-12" ng-repeat="m in motosurf | filter: {type:'drinks'}" ng-click="additem(s)">
                                             <dl>
                                                 <dt>{{m.item}}<p style="float: right;">{{m.price | currency : '$' : 2}}</p></dt>
@@ -131,8 +131,8 @@
                                 <!--Special Requesets-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <label for="comment" id="comment" class="col-sm-2 control-label">Special Requests</label>
-                                        <div id="test4" class="col-sm-10" ng-class="{ 'has-error' : form.comment.$invalid && !form.comment.$pristine }">
+                                        <label for="comment" id="comment" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Special Requests</h2></label>
+                                        <div id="test4" class="col-sm-12" ng-class="{ 'has-error' : form.comment.$invalid && !form.comment.$pristine }">
                                             <textarea class="form-control" name="comment" rows="3" placeholder="Do you have any special requests?" ng-model="newComment.comment" required></textarea>
                                         </div>
                                     </div>
@@ -195,7 +195,7 @@
                                 <!--daily-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <label for="daily" id="daily" class="col-sm-2 control-label"><h2 style="color:#003366">Daily Special</h2></label>
+                                        <label for="daily" id="daily" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Daily Special</h2></label>
                                         <div class="col-md-12 food">
                                             <dl>
                                                 <dt>Item Name<p style="float: right;">$5.00</p></dt>
@@ -212,7 +212,7 @@
                                 <!--sides-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <label for="drink" id="drink" class="col-sm-2 control-label"><h2 style="color:#003366">Cold Drinks</h2></label>
+                                        <label for="drink" id="drink" class="col-sm-2 control-label"><h2 style="color:#003366">Beverages</h2></label>
                                         <div id="test" class="col-sm-12" ng-repeat="s in siganos | filter: {type:'drinks'}" ng-click="additem(s)">
                                             <dd>{{s.item}}<p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
                                         </div>
@@ -222,8 +222,8 @@
                                 <!--Special Requesets-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <label for="comment" class="col-sm-2 control-label">Special Requests</label>
-                                        <div class="col-sm-10" ng-class="{ 'has-error' : form.comment.$invalid && !form.comment.$pristine }">
+                                        <label for="comment" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Special Requests</h2></label>
+                                        <div class="col-sm-12" ng-class="{ 'has-error' : form.comment.$invalid && !form.comment.$pristine }">
                                             <textarea class="form-control" name="comment" rows="3" placeholder="Do you have any special requests?" ng-model="newComment.comment" required></textarea>
                                         </div>
                                     </div>
@@ -262,7 +262,7 @@
                                 <!--Special Requesets-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <label for="special" class="col-sm-2 control-label"><h2 style="color:#003366">Special Requests</h2></label>
+                                        <label for="special" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Special Requests</h2></label>
                                         <div class="col-sm-12" ng-class="{ 'has-error' : form.comment.$invalid && !form.comment.$pristine }">
                                             <textarea class="form-control" name="comment" rows="3" placeholder="Do you have any special requests?" ng-model="newComment.comment" required></textarea>
                                         </div>
@@ -292,7 +292,7 @@
                                 <!--dawgs-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <label for="dawg" id="dawg" class="col-sm-2 control-label"><h2 style="color:#003366">Hot Dawgs</h2></label>
+                                        <label for="dawg" id="dawg" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Hot Dawgs</h2></label>
                                         <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'Dawgs'}" ng-click="addItem(d)">
                                             <dl>
                                                 <dt>{{d.item}}<p style="float: right;">{{d.price | currency : '$' : 2}}</p></dt>
@@ -304,7 +304,7 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <label for="sig-topping" id="sig-topping" class="col-sm-2 control-label"><h2 style="color:#003366">Signature Toppings</h2></label>
+                                        <label for="sig-topping" id="sig-topping" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Signature Toppings</h2></label>
                                         <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'signature topping'}" ng-click="addItem(d)">
                                             <dl>
                                                 <dt>{{d.item}}</dt>
@@ -315,7 +315,7 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <label for="self-topping" id="self-topping" class="col-sm-2 control-label"><h2 style="color:#003366">Self Toppings</h2></label>
+                                        <label for="self-topping" id="self-topping" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Self Toppings</h2></label>
                                         <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'self topping'}" ng-click="addItem(d)">
                                             <dl>
                                                 <dt>{{d.item}}</dt>
@@ -327,7 +327,7 @@
                                 <!--Special Requesets-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <label for="comment" class="col-sm-2 control-label"><h2 style="color:#003366">Special Requests</h2></label>
+                                        <label for="comment" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Special Requests</h2></label>
                                         <div class="col-sm-12" ng-class="{ 'has-error' : form.comment.$invalid && !form.comment.$pristine }">
                                             <textarea class="form-control" name="comment" rows="3" placeholder="Do you have any special requests?" ng-model="newComment.comment" required></textarea>
                                         </div>
