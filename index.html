@@ -249,12 +249,80 @@
                         <div class="modal-body">
                             <form name="form" class="form-horizontal" role="form" novalidate>
 
-                                <!--food items-->
+                                <div class="col-sm-12">
+                                    <!--spike it-->
+                                    <div class="form-group col-sm-6">
+                                        <div>
+                                            <label for="meat" class="control-label"><h2 style="color:#003366">SPIKE IT! $2</h2></label>
+                                            <p>Add a Hot Link to any sandwich</p>
+                                        </div>
+                                    </div>
+
+                                    <!--make it a combo-->
+                                    <div class="form-group">
+                                        <div>
+                                            <label for="meat" class="control-label"><h2 style="color:#003366">MAKE IT A COMBO $2</h2></label>
+                                            <p>Add a side and a drink (add $.50 for mac & cheese)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <!--food item-->
+                                    <div class="col-sm-4">
+                                        <label for="sanwiches" class="col-sm-2 control-label"><h2 style="color:#003366">Sandwiches</h2></label>
+                                        <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'sandwich'}" ng-click="additem(r)">
+                                            <dd>{{r.item}}</dd>
+                                        </div>
+                                    </div>
+
+                                    <!--meats-->
+                                    <div class="col-sm-4">
+                                        <label for="meat" class="col-sm-2 control-label"><h2 style="color:#003366">Meats</h2></label>
+                                        <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'meats'}" ng-click="additem(r)">
+                                            <dd>{{r.item}}</dd>
+                                        </div>
+                                    </div>
+
+                                    <!--sauces-->
+                                    <div class="col-sm-4">
+                                        <label for="sauce" class="col-sm-2 control-label"><h2 style="color:#003366">Sauces</h2></label>
+                                        <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'sauce'}" ng-click="additem(r)">
+                                            <dd>{{r.item}}</dd>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--house specials-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <label for="meat" class="col-sm-2 control-label"><h2 style="color:#003366">Meats</h2></label>
-                                        <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'meats'}" ng-click="additem(s)">
-                                            <dd>{{r.item}}</dd>
+                                        <label for="specials" id="specials" class="col-sm-2 control-label"><h2 style="color:#003366">House Specials</h2></label>
+                                        <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'special'}" ng-click="additem(r)">
+                                            <dl>
+                                                <dt>{{r.item}}<p style="float: right;">{{r.price | currency : '$' : 2}}</p></dt>
+                                                <dd><p style="font-size: 75%; color: #336699">{{r.description}}</p></dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <label for="side" id="side" class="col-sm-2 control-label"><h2 style="color:#003366">Sides</h2></label>
+                                        <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'sides'}" ng-click="additem(r)">
+                                            <dd>{{r.item}}<p style="float: right;">{{r.price | currency : '$' : 2}}</p></dt>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--drinks-->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <label for="drinks" id="drinks" class="col-sm-2 control-label"><h2 style="color:#003366;">Beverages</h2></label>
+                                        <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'drinks'}" ng-click="additem(r)">
+                                            <dl>
+                                                <dt>{{r.item}}<p style="float: right;">{{r.price | currency : '$' : 2}}</p></dt>
+                                            </dl>
                                         </div>
                                     </div>
                                 </div>
@@ -293,7 +361,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <label for="dawg" id="dawg" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Hot Dawgs</h2></label>
-                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'Dawgs'}" ng-click="addItem(d)">
+                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'dawgs'}" ng-click="addItem(d)">
                                             <dl>
                                                 <dt>{{d.item}}<p style="float: right;">{{d.price | currency : '$' : 2}}</p></dt>
                                                 <dd><p style="font-size: 75%; color: #336699">{{d.description}}</p></dd>
@@ -305,7 +373,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <label for="sig-topping" id="sig-topping" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Signature Toppings</h2></label>
-                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'signature topping'}" ng-click="addItem(d)">
+                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'signatureTopping'}" ng-click="addItem(d)">
                                             <dl>
                                                 <dt>{{d.item}}</dt>
                                             </dl>
@@ -316,9 +384,21 @@
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <label for="self-topping" id="self-topping" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Self Toppings</h2></label>
-                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'self topping'}" ng-click="addItem(d)">
+                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'selfTopping'}" ng-click="addItem(d)">
                                             <dl>
                                                 <dt>{{d.item}}</dt>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--drinks-->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <label for="drinks" id="drinks" class="col-sm-2 control-label"><h2 style="color:#003366;">Beverages</h2></label>
+                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'drinks'}" ng-click="additem(d)">
+                                            <dl>
+                                                <dt>{{d.item}}<p style="float: right;">{{d.price | currency : '$' : 2}}</p></dt>
                                             </dl>
                                         </div>
                                     </div>

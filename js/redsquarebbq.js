@@ -1,28 +1,46 @@
 
 var redsquarebbq = [
     {
+        item: 'BBQ Sandwich',
+        price: 5.95,
+        type: 'sandwich',
+        truck: 'redsquarebbq'
+    },
+    {
+        item: 'BBQ Slider',
+        price: 2.00,
+        type: 'sandwich',
+        truck: 'redsquarebbq'
+    },
+    {
         item: 'Pulled Pork',
-        type: 'meats'
+        type: 'meats',
+        truck: 'redsquarebbq'
     },
     {
         item: 'BBQ Chicken',
-        type: 'meats'
+        type: 'meats',
+        truck: 'redsquarebbq'
     },
     {
         item: 'Sliced Brisket',
-        type: 'meats'
+        type: 'meats',
+        truck: 'redsquarebbq'
     },
     {
         item: 'Honey BBQ Sauce',
-        type: 'sauce'
+        type: 'sauce',
+        truck: 'redsquarebbq'
     },
     {
         item: 'Spicy BBQ Sauce',
-        type: 'sauce'
+        type: 'sauce',
+        truck: 'redsquarebbq'
     },
     {
         item: 'Carolina Mustard Sauce',
-        type: 'sauce'
+        type: 'sauce',
+        truck: 'redsquarebbq'
     },
     {
         item: 'Gluten-Free BBQ Plate',

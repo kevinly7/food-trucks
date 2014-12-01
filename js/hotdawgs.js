@@ -6,66 +6,114 @@ var hotdawgs = [
     {
         item: 'Kosher Beef Frank',
         price: 4.00,
-        type: 'Dawgs',
+        type: 'dawgs',
         description: "1/4 lb. of 100% pure kosher beef. Nothing artificial. We're talking Hebrew National here. ",
         truck: 'hotdawgs'
     },
     {
         item: 'Italian Chicken Sausage',
         price: 4.50,
-        type: 'Dawgs',
+        type: 'dawgs',
         description: "Fresh garlic, fennel, and italian herbs. By Seattle's Cascioppo Brothers",
         truck: 'hotdawgs'
     },
     {
         item: 'Vegan Apple-Sage Field Roast Sausage',
         price: 4.25,
-        type: 'Dawgs',
+        type: 'dawgs',
         description: 'Made in Seattle. Infused with Sage, Ginger, Granny Smith Apples and Yukon Gold potatoes',
         truck: 'hotdawgs'
     },
     {
         item: 'Balsamic Grilled Onion Relish',
-        type: 'signature topping'
+        type: 'signatureTopping'
     },
     {
         item: 'Fresh Pickle Relish',
-        type: 'signature topping'
+        type: 'signatureTopping'
     },
     {
         item: 'Cream Cheese',
-        type: 'signature topping'
+        type: 'signatureTopping'
     },
     {
         item: 'Grilled Onion',
-        type: 'signature topping'
+        type: 'signatureTopping'
     },
     {
         item: 'Sauerkraut',
-        type: 'signature topping'
+        type: 'signatureTopping'
     },
     {
         item: 'Jalapeno',
-        type: 'self topping'
+        type: 'selfTopping'
     },
     {
         item: 'Fresh Chopped Onions',
-        type: 'self topping'
+        type: 'selfTopping'
     },
     {
         item: 'Sweet Relish',
-        type: 'self topping'
+        type: 'selfTopping'
     },
     {
         item: 'Yellow Mustard',
-        type: 'self topping'
+        type: 'selfTopping'
     },
     {
         item: 'Dijon Mustard',
-        type: 'self topping'
+        type: 'selfTopping'
     },
     {
         item: 'Ketchup',
-        type: 'self topping'
+        type: 'selfTopping'
+    },
+    {
+        item: 'Coke',
+        price: 1.05,
+        type: 'drinks',
+        truck: 'redsquarebbq'
+    },
+    {
+        item: 'Diet Coke',
+        price: 1.05,
+        type: 'drinks',
+        truck: 'redsquarebbq'
+    },
+    {
+        item: 'Coke Zero',
+        price: 1.05,
+        type: 'drinks',
+        truck: 'redsquarebbq'
+    },
+    {
+        item: 'Sprite',
+        price: 1.05,
+        type: 'drinks',
+        truck: 'redsquarebbq'
+    },
+    {
+        item: 'Lemonade',
+        price: 1.05,
+        type: 'drinks',
+        truck: 'redsquarebbq'
+    },
+    {
+        item: 'Grape Fanta',
+        price: 1.05,
+        type: 'drinks',
+        truck: 'redsquarebbq'
+    },
+    {
+        item: 'Orange Fanta',
+        price: 1.05,
+        type: 'drinks',
+        truck: 'redsquarebbq'
+    },
+    {
+        item: 'Water',
+        price: 1.05,
+        type: 'drinks',
+        truck: 'redsquarebbq'
     }
 ];
