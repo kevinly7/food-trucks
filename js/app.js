@@ -62,4 +62,6 @@ angular.module('FoodApp', [])
                 })
         };
 
+        $scope.refreshItems();
+
     });
