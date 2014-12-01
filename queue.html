@@ -28,8 +28,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html #about">About Us</a></li>
-                            <li><a href="index.html #how-it-works">How It Works</a></li>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="index.html#how-it-works">How It Works</a></li>
                             <li class="active"><a href="queue.html">My Orders</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -38,8 +38,8 @@
 
             <section id="header">
                 <div class="container-fluid first-div-offset">
-                    <h1>Food Truck Orders</h1>
-                    <p class="subtitle">Manage your student orders here. On this page you can fulfill or decline an order. The student will arrive and make the payment in person.</p>
+                    <h1>My Orders</h1>
+                    <p class="subtitle">Manage your orders here. On this page you can review your selections, confirm your order, and submit it to the queue. You must go to the food truck in person to pay and receive your food. </p>
 <!-- 
                     <label for="food-progress">Order Progress</label>
                     <div class="progress">
@@ -50,19 +50,23 @@
 
                     <!--REMOVE FILTERS-->
 
-                    <label id="filters" for="filters">Pick and choose your food truck</label>
+                    <label id="filters" for="filters">Food Trucks</label>
+
 
                     <!--BUTTON CHOICES-->
-                    <button type="button" class="btn btn-default" id="hot-dawgs-visible">Hot Dawgs</button>
-                    <button type="button" class="btn btn-default" id="motosurf-visible">Motosurf</button>
-                    <button type="button" class="btn btn-default" id="red-square-bbq-visible">Red Square BBQ</button>
-                    <button type="button" class="btn btn-default" id="siguanos-visible">Siganos</button>
+                    <div class="btn">
+                        <button type="button" class="btn btn-default" id="hot-dawgs-visible">Hot Dawgs</button>
+                        <button type="button" class="btn btn-default" id="motosurf-visible">Motosurf</button>
+                        <button type="button" class="btn btn-default" id="red-square-bbq-visible">Red Square BBQ</button>
+                        <button type="button" class="btn btn-default" id="siguanos-visible">Siganos</button>
+                    </div> 
                 </div>
             </section>
 
             <section id="main">
                 <div class="container">
-                    <div class="well col-sm-4 checkout" style="float:right" id="running-total">
+                    <div class="well col-sm-4 checkout" id="running-total"> 
+                        <!-- style="float:right" --> 
                         <table class="table">
                             <thead>
                                 <h3>Checkout Total</h3>
@@ -76,11 +80,11 @@
                                 <td>10.00%</td>
                             </tr>
                         </table>
-                <p>
-                    <button class="btn btn-primary checkout-button" ng-click="refreshItems()">Update Order</button>
-                    <!--<img src="img/ajax-spinner.gif" alt="loading animation" ng-if="loading || updating"/> -->
-                     <button class="btn btn-primary checkout-button" ng-click="asdfsdf()">Checkout</button>
-                </p>
+                        <div class="btn">
+                            <button class="btn btn-primary checkout-button" ng-click="refreshItems()">Update Order</button>
+                            <!--<img src="img/ajax-spinner.gif" alt="loading animation" ng-if="loading || updating"/> -->
+                             <button class="btn btn-primary checkout-button" ng-click="asdfsdf()">Checkout</button>
+                        </div>
                     </div>
 
                     <div class="well row col-sm-8" id="motosurf">
