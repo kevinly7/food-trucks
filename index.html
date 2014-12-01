@@ -95,7 +95,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <label for="breakfast" id="breakfast" class="col-sm-2 control-label"><h2 style="color:#003366">Breakfast</h2></label>
-                                        <div id="test1" class="col-sm-12" ng-repeat="m in motosurf | filter: {type:'entree'}" ng-click="additem(s)">
+                                        <div id="test1" class="col-sm-12" ng-repeat="m in motosurf | filter: {type:'entree'}" ng-click="additem(m)">
                                             <dl>
                                                 <dt>{{m.item}}<p style="float: right;">{{m.price | currency : '$' : 2}}</p></dt>
                                                 <dd><p style="font-size: 75%; color: #336699">{{m.description}}</p></dd>
@@ -108,7 +108,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <label for="sides" id="sides" class="col-sm-2 control-label"><h2 style="color:#003366">Sides</h2></label>
-                                        <div id="test2" class="col-sm-12" ng-repeat="m in motosurf | filter: {type:'sides'}" ng-click="additem(s)">
+                                        <div id="test2" class="col-sm-12" ng-repeat="m in motosurf | filter: {type:'sides'}" ng-click="additem(m)">
                                             <dl>
                                                 <dt>{{m.item}}<p style="float: right;">{{m.price | currency : '$' : 2}}</p></dt>
                                             </dl>
@@ -120,7 +120,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <label for="drinks" id="drinks" class="col-sm-2 control-label"><h2 style="color:#003366;">Beverages</h2></label>
-                                        <div id="test3" class="col-sm-12" ng-repeat="m in motosurf | filter: {type:'drinks'}" ng-click="additem(s)">
+                                        <div id="test3" class="col-sm-12" ng-repeat="m in motosurf | filter: {type:'drinks'}" ng-click="additem(m)">
                                             <dl>
                                                 <dt>{{m.item}}<p style="float: right;">{{m.price | currency : '$' : 2}}</p></dt>
                                             </dl>
@@ -253,7 +253,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <label for="meat" class="col-sm-2 control-label"><h2 style="color:#003366">Meats</h2></label>
-                                        <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'meats'}" ng-click="additem(s)">
+                                        <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'meats'}" ng-click="additem(r)">
                                             <dd>{{r.item}}</dd>
                                         </div>
                                     </div>
@@ -293,7 +293,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <label for="dawg" id="dawg" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Hot Dawgs</h2></label>
-                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'Dawgs'}" ng-click="addItem(d)">
+                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'Dawgs'}" ng-click="additem(d)">
                                             <dl>
                                                 <dt>{{d.item}}<p style="float: right;">{{d.price | currency : '$' : 2}}</p></dt>
                                                 <dd><p style="font-size: 75%; color: #336699">{{d.description}}</p></dd>
@@ -305,7 +305,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <label for="sig-topping" id="sig-topping" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Signature Toppings</h2></label>
-                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'signature topping'}" ng-click="addItem(d)">
+                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'signature topping'}" ng-click="additem(d)">
                                             <dl>
                                                 <dt>{{d.item}}</dt>
                                             </dl>
@@ -316,7 +316,7 @@
                                 <div class="form-group">
                                     <div class="col-sm-12">
                                         <label for="self-topping" id="self-topping" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Self Toppings</h2></label>
-                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'self topping'}" ng-click="addItem(d)">
+                                        <div class="col-sm-12" ng-repeat="d in hotdawgs | filter: {type:'self topping'}" ng-click="additem(d)">
                                             <dl>
                                                 <dt>{{d.item}}</dt>
                                             </dl>
