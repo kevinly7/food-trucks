@@ -60,7 +60,7 @@
                 </div>
             </section>
 
-            <section id="main">
+            <section id="main" ng-app="FoodApp" ng-controller="FoodController">
                 <div class="container">
                     <div class="well col-sm-4 checkout" style="float:right" id="running-total">
                         <table class="table">
@@ -95,11 +95,11 @@
                             </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Hamburger</td>
+                                <tr ng-repeat="item in items | filter: {truck: 'motosurf'}">
+                                    <td>{{item.item}}</td>
                                     <td>1</td>
-                                    <td>$10.00</td>
-                                    <td><input class="check" type="checkbox" ng-model="delete.done" ng-change="deleteItem(item)"/></td>
+                                    <td>{{item.price | currency : '$' : 2}}</td>
+                                    <td><button type="submit" class="btn btn-primary" ng-click="deleteitem(item)">Delete</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -116,17 +116,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>Hamburger</td>
+                            <tr ng-repeat="item in items | filter: {truck: 'redsquarebbq'}">
+                                <td>{{item.item}}</td>
                                 <td>1</td>
-                                <td>$10.00</td>
-                                <td><input type="checkbox" ng-model="delete.done" ng-change="deleteItem(item)"/></td>
-                            </tr>
-                            <tr>
-                                <td>Hamburger</td>
-                                <td>1</td>
-                                <td>$10.00</td>
-                                <td><input type="checkbox" ng-model="delete.done" ng-change="deleteItem(item)"/></td>
+                                <td>{{item.price | currency : '$' : 2}}</td>
+                                <td><button type="submit" class="btn btn-primary" ng-click="deleteitem(item)">Delete</button></td>
                             </tr>
                             </tbody>
                         </table>
@@ -144,23 +138,11 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>Hamburger</td>
+                            <tr ng-repeat="item in items | filter: {truck: 'hotdawgs'}">
+                                <td>{{item.item}}</td>
                                 <td>1</td>
-                                <td>$10.00</td>
-                                <td><input type="checkbox" ng-model="delete.done" ng-change="deleteItem(item)"/></td>
-                            </tr>
-                            <tr>
-                                <td>Hamburger</td>
-                                <td>1</td>
-                                <td>$10.00</td>
-                                <td><input type="checkbox" ng-model="delete.done" ng-change="deleteItem(item)"/></td>
-                            </tr>
-                            <tr>
-                                <td>Hamburger</td>
-                                <td>1</td>
-                                <td>$10.00</td>
-                                <td><input type="checkbox" ng-model="delete.done" ng-change="deleteItem(item)"/></td>
+                                <td>{{item.price | currency : '$' : 2}}</td>
+                                <td><button type="submit" class="btn btn-primary" ng-click="deleteitem(item)">Delete</button></td>
                             </tr>
                             </tbody>
                         </table>
@@ -178,29 +160,11 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>Hamburger</td>
+                            <tr ng-repeat="item in items | filter: {truck: 'siganos'}">
+                                <td>{{item.item}}</td>
                                 <td>1</td>
-                                <td>$10.00</td>
-                                <td><input type="checkbox" ng-model="delete.done" ng-change="deleteItem(item)"/></td>
-                            </tr>
-                            <tr>
-                                <td>Hamburger</td>
-                                <td>1</td>
-                                <td>$10.00</td>
-                                <td><input type="checkbox" ng-model="delete.done" ng-change="deleteItem(item)"/></td>
-                            </tr>
-                            <tr>
-                                <td>Hamburger</td>
-                                <td>1</td>
-                                <td>$10.00</td>
-                                <td><input type="checkbox" ng-model="delete.done" ng-change="deleteItem(item)"/></td>
-                            </tr>
-                             <tr>
-                                <td>Hamburger</td>
-                                <td>1</td>
-                                <td>$10.00</td>
-                                <td><input type="checkbox" ng-model="delete.done" ng-change="deleteItem(item)"/></td>
+                                <td>{{item.price | currency : '$' : 2}}</td>
+                                <td><button type="submit" class="btn btn-primary" ng-click="deleteitem(item)">Delete</button></td>
                             </tr>
                             </tbody>
                         </table>
@@ -212,6 +176,13 @@
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-lightbox/0.7.0/bootstrap-lightbox.min.css"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.2/angular.min.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/siganos.js"></script>
+        <script src="js/redsquarebbq.js"></script>
+        <script src="js/motosurf.js"></script>
+        <script src="js/hotdawgs.js"></script>
 
     </body>
 
