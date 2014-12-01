@@ -147,12 +147,6 @@ li {
 }
 
 
-
-
-
-
-
-
 /*if bigger screen do this*/
 @media (min-width: 992px) {
 	body {
@@ -209,5 +203,9 @@ li {
 		height: 5%;
 		width: 5%;
 		display: inline-block;
+	}
+
+	.checkout-button { 
+		text-align: center;
 	}
 }
