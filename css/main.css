@@ -13,20 +13,21 @@ body {
 	color: whitesmoke;
 }
 
-#header div {
+.check { 
 	text-align: center;
-	background-color: #3D007a;
-	opacity: 0.4;
-	overflow-x: hidden;
+}
+
+.table-striped > tbody > tr:nth-child(even) { 
+	background-color: #444444;
+}
+
+.table-striped > tbody > tr:nth-child(odd) { 
+	background-color: #d9d9d9;
 }
 
 .full-width {
 	margin: 0 auto;
 	width: 100%;
-}
-
-.checkout {
-	background-color: beige;
 }
 
 .container-fluid, .container {
@@ -41,16 +42,25 @@ body {
 	color: black;
 }
 
-header {
-	background-color: #3D007A;
+#header, footer, .uw-purple { 
+	background-color: #4b2e83;
 	padding: 0.5em;
 	text-align: center;
-	opacity: 0.4;
-	font-size: 150%;
+}
+
+header {
+	font-size: 100%;
+}
+
+footer {
+	margin-top: 1em;
+	border-top: 5px;
+	font-size: 80%;
+	text-align: center;
 }
 
 .headline {
-	font-size: 75%;
+	font-size: 100%;
 	color: #EEEEEE;
 	margin-bottom: 1em;
 }
@@ -63,34 +73,38 @@ h1 {
 	font-size: 150%;
 }
 
-#menus h1 {
+#menus h2 {
 	text-align: center;
 }
 
-footer {
-	background-color: #3D007A;
-	font-size: 80%;
-	text-align: center;
-	opacity: 0.4;
-	overflow-x: hidden;
-}
-
-section {
-	padding-bottom: 3em;
+h2 { 
+	font-size: 130%;
 }
 
 img { 
-	height: 80%;
-	width: 80%;
+	height: 60%;
+	width: 60%;
 	display:block;
     margin: auto;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-#about { 
+#about, #how-it-works { 
 	text-align: center;
-	background-color: rgba(255, 215, 0, 0.1);
+	padding-bottom: 1em;
+}
+
+#how-it-works, .well, .table-striped > tbody > tr:nth-child(even) { 
+ 	background-color: #b7a57a;;
+}
+
+#about, .checkout, .table-striped > tbody > tr:nth-child(odd) { 
+	background-color: #85754d;
+}
+
+#how-it-works { 
+	margin-top: 1em;
 }
 
 .logo { 
@@ -99,13 +113,39 @@ img {
 	display: inline-block;
 }
 
-.uw-purple {
-	background-color: purple;
+nav ul {
+	padding: 0px;
+	margin: 0px;
 }
 
-.uw-yellow {
-	background-color: gold;
+nav ul a:hover, input:focus {
+	color: #00E;
 }
+
+nav li {
+
+	display: inline-block;
+	margin-right: 1em;
+}
+
+li { 
+	list-style-type: none;
+}
+
+#food-truck { 
+ 	width: 2em;
+ 	height: 2em;
+    margin-top: -10px;
+}
+
+.navbar {
+    background: rgba(0,0,0,.7);
+}
+
+#how-it-works, #about { 
+	text-align: center;
+}
+
 
 /*if bigger screen do this*/
 @media (min-width: 992px) {
@@ -155,7 +195,13 @@ img {
 		font-size: 275%;
 	}
 
-	.headline { 
-		font-size: 100%;
+	h2 { 
+		font-size: 160%;
+	}
+
+	.logo { 
+		height: 5%;
+		width: 5%;
+		display: inline-block;
 	}
 }

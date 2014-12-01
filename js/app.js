@@ -35,7 +35,7 @@ angular.module('FoodApp', [])
                 });
         };
 
-        $scope.refreshitems = function () {
+        $scope.refreshItems = function () {
             $scope.loading = true;
             $http.get(itemsUrl)
                 .success(function (data) {
@@ -52,7 +52,7 @@ angular.module('FoodApp', [])
         $scope.deleteitem = function (item) {
             $http.delete(itemsUrl + '/' + item.objectId)
                 .success(function (responseData) {
-                    $scope.refreshitems();
+                    $scope.refreshItems();
                 })
                 .error(function (err) {
                     console.log(err);
@@ -61,4 +61,5 @@ angular.module('FoodApp', [])
                     //nothing needed
                 })
         };
+
     });

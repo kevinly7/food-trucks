@@ -19,22 +19,24 @@
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
+                    <div class="navbar-right">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand">Husky Food Trucks</a>
+
+                        <a class="navbar-brand" href="#">
+                            <img id="food-truck" src="img/foodtruck.png" alt="UW Street Food Logo" >
+                        </a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
                             <li><a href="queue.html">My Orders</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -50,7 +52,7 @@
 
             <section id="menus">
                 <div class="row">
-                    <h1>Start by selecting from a food truck below</h1>
+                    <h2>Start by selecting a food truck below: </h2>
                 </div>
                 <div class="container">
                     <div class="row">
@@ -263,14 +265,22 @@
                 </div>
             </div>
 
-            <section id="about">
-                <div class="container-fluid">
+            <section id="how-it-works">
+                <div class="container">
                     <h2>How It Works</h2>
-                    <div class="container">
-                        <p>Order from any of the food trucks in Red Square from this page. Click each logo in order to see the menu.
-                            Once you make your selections, your orders will be put in the queue. Go and claim your food when it is ready.
-                            Finally, say NO to the rain and YES to enjoying delicious food while still being dry. </p>
-                    </div>
+                    <p>Order from any of the food trucks in Red Square in four easy steps: </p>
+                    <ul>
+                        <li>1) Click on a food truck to view the available menus.</li>
+                        <li>2) Make your selections.</li>
+                        <li>3) Submit and confirm your order. Your order will be put into the queue.</li>
+                        <li>4) Go and claim your food when it is ready.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="about">
+                <div class="container">
+                    <h2>About Us</h2>
+                    <p>We are four juniors at the University of Washington who have soaked in the rain to get our lunches for two years too many. We created this website to expedite the process of ordering and receiving meals, while keeping the chances of slipping across Red Square to a minimum. </p>
                 </div>
             </section>
 
@@ -279,7 +289,7 @@
                     <a href="https://www.facebook.com/uwdining"><img class="logo" src="img/facebook.png" alt="Facebook"></a>
                     <a href="https://twitter.com/uw_dining"><img class="logo" src="img/twitter.png" alt="Twitter"></a>
                 </p>
-                <p><i>&copy; 2014, Dream Team</i></p>
+                <p>&copy; 2014, Dream Team</p>
             </footer>
         </main>
 
