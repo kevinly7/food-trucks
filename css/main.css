@@ -13,11 +13,6 @@ body {
 	color: whitesmoke;
 }
 
-#test {
-	margin-left: 17%;
-	width: 500px;
-}
-
 .check {
 	text-align: center;
 }
@@ -152,6 +147,12 @@ li {
 }
 
 
+
+
+
+
+
+
 /*if bigger screen do this*/
 @media (min-width: 992px) {
 	body {
@@ -161,7 +162,7 @@ li {
 		background-size: cover;
 		font-size: 18px;
 		font-family: 'Viga', sans-serif;
-		font-style: bold; ;
+		font-style: bold;
 	}
 
 	.tag-line {
