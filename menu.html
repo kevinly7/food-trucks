@@ -9,16 +9,10 @@
         <title>Siganos</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/menu.css">
-        <!--<link rel="shortcut icon" href="img/pizza-icon.png">-->
-        <script src="lib/angular-1.3.1/angular.js"></script>
-
-        <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-        <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.2/angular.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     </head>
 
@@ -69,11 +63,8 @@
 
             <section id="menu" class="row">
                 <h2>Entrees</h2>
-<<<<<<< HEAD
                 <div class="col-md-6 food" ng-repeat="s in siganos | filter: {type:'entree'}" ng-click="additem(s)">
-=======
                 <div class="col-md-6 food" ng-repeat="s in siganos | filter: {type:'entree'}">
->>>>>>> b58111851b065f90c7715eb83116ca85f73b2a15
                     <dl>
                         <dt>{{s.item}}<p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
                         <dd>{{s.description}}</dd>
@@ -117,10 +108,11 @@
                 <p><a href=#> Back to Top &uarr;</a></p>
             </footer>
         </main>
+
+        <script src="js/app.js"></script>
         <script src="js/siganos.js"></script>
         <script src="js/redsquarebbq.js"></script>
         <script src="js/motosurf.js"></script>
         <script src="js/hotdawgs.js"></script>
-        <script src="js/app.js"></script>
     </body>
 </html>

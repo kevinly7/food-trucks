@@ -1,25 +1,5 @@
-#motosurf {
-
-}
-
-#red-square-bbq {
-
-}
-
-#siguanos {
-
-}
-
-#hot-dawgs {
-
-}
-
 div .row {
     padding-bottom: 25px;
-}
-
-.header {
-    padding-bottom: 30px;
 }
 
 label {
@@ -30,14 +10,7 @@ table {
     margin: 10px;
 }
 
-#header {
-    padding-top: 5em;
-}
-
 #filters {
     padding-right: 2em;
 }
 
-.checkout {
-    background-color: beige;
-}

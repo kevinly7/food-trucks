@@ -1,6 +1,5 @@
 "use strict";
 
-<<<<<<< HEAD
 var itemsUrl = 'https://api.parse.com/1/classes/items';
 
 //create new angular module
@@ -20,15 +19,15 @@ angular.module('FoodApp', [])
         $scope.hotdawgs = hotdawgs;
         $scope.motosurf = motosurf;
         $scope.redsquarebbq = redsquarebbq;
-    
-	    $scope.additem = function(item) {
+
+        $scope.additem = function (item) {
             $scope.loading = true;
             $http.post(itemsUrl, item)
-                .success(function(responseData) {
+                .success(function (responseData) {
                     $scope.item.objectId = responseData.objectId;
                     $scope.items.push($scope.item);
                 })
-                .error(function(err) {
+                .error(function (err) {
                     $scope.errorMessage = err;
                 })
                 .finally(function () {
@@ -36,21 +35,21 @@ angular.module('FoodApp', [])
                 });
         };
 
-        $scope.refreshitems = function() {
+        $scope.refreshitems = function () {
             $scope.loading = true;
             $http.get(itemsUrl)
-                .success(function(data) {
+                .success(function (data) {
                     $scope.items = data.results;
                 })
-                .error(function(err) {
-                    $scope.errorMessage= err;
+                .error(function (err) {
+                    $scope.errorMessage = err;
                 })
-                .finally(function() {
+                .finally(function () {
                     $scope.loading = false;
                 });
         };
 
-         $scope.deleteitem = function(item) {
+        $scope.deleteitem = function (item) {
             $http.delete(itemsUrl + '/' + item.objectId)
                 .success(function (responseData) {
                     $scope.refreshitems();
@@ -61,11 +60,5 @@ angular.module('FoodApp', [])
                 .finally(function () {
                     //nothing needed
                 })
-        }
-=======
-//create new angular module
-angular.module('FoodApp', [])
-    .controller('FoodController', function($scope) {
-        $scope.siganos = siganos;
->>>>>>> b58111851b065f90c7715eb83116ca85f73b2a15
+        };
     });

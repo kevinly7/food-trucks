@@ -1,18 +1,35 @@
 @import url(http://fonts.googleapis.com/css?family=Viga);
 
 body {
-	margin: 0;
-	padding: 0; 
+	margin: 0 auto;
+	padding: 0 auto;
 	background-image: url(../img/footer_lodyas.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	font-size: 18px;
 	font-family: 'Viga', sans-serif;
-	font-style: bold; 
+	font-style: normal;
+	color: whitesmoke;
 }
 
-.container-fluid {
+#header div {
+	text-align: center;
+	background-color: #3D007a;
+	opacity: 0.4;
+	overflow-x: hidden;
+}
+
+.full-width {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.checkout {
+	background-color: beige;
+}
+
+.container-fluid, .container {
 	color: #FFFFFF;
 }
 
@@ -34,8 +51,12 @@ header {
 
 .headline {
 	font-size: 75%;
-	font-color: #EEEEEE;
+	color: #EEEEEE;
 	margin-bottom: 1em;
+}
+
+.first-div-offset {
+	padding-top: 50px;
 }
 
 h1 {
@@ -47,14 +68,15 @@ h1 {
 }
 
 footer {
-	padding: 0.5em;
-	margin-top: 1em;
 	background-color: #3D007A;
-	border-top: 5px;
-	border-top-color: #EC791F;
 	font-size: 80%;
 	text-align: center;
 	opacity: 0.4;
+	overflow-x: hidden;
+}
+
+section {
+	padding-bottom: 3em;
 }
 
 img { 
