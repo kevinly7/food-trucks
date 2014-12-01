@@ -46,15 +46,6 @@
             <header class="row">
                 <h1>Siganos</h1>
                 <img src="img/ajax-spinner.gif" alt="ajax animation" ng-if="loading"/>
-                <!--<p id="tag-line">Feeding Hungry Huskies Since 2013</p>-->
-
-                <!--<nav role="navigation">-->
-                    <!--<ul>-->
-                        <!--<li><a href="#location">location</a></li>-->
-                        <!--<li><a href="#menu">menu</a></li>-->
-                        <!--<li><a href="#about">about</a></li>-->
-                    <!--</ul>-->
-                <!--</nav>-->
                 <div id="meat">
                     <dd id="meatType">Meats:</dd>
                     <dd id="meatType">Chicken Tinga, Carne Asada, Pork Carnitas, Vegan Gardien Chicken</dd>
@@ -64,7 +55,6 @@
             <section id="menu" class="row">
                 <h2>Entrees</h2>
                 <div class="col-md-6 food" ng-repeat="s in siganos | filter: {type:'entree'}" ng-click="additem(s)">
-                <div class="col-md-6 food" ng-repeat="s in siganos | filter: {type:'entree'}">
                     <dl>
                         <dt>{{s.item}}<p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
                         <dd>{{s.description}}</dd>
@@ -74,12 +64,10 @@
 
             <section id="menu" class="row">
                 <h2>Sides</h2>
-                <dl class="col-md-6" ng-repeat="s in siganos | filter: {type:'Sides'}" ng-click="additem(s)">
-                <dl class="col-md-6" ng-repeat="s in siganos | filter: {type:'Sides'}">
+                <dl class="col-md-6" ng-repeat="s in siganos | filter: {type:'sides'}" ng-click="additem(s)">
                     <dt class="food">{{s.item}} <p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
                 </dl>
             </section>
-
 
             <section id="menu" class="row">
                 <h2>Daily Special</h2>

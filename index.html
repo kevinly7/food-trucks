@@ -83,7 +83,8 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h3 class="modal-title" id="myModalLabel">Motosurf</h3>
+                            <h3 class="modal-title" id="myModalLabel">Moto-Breakfast</h3>
+                            <p>Hours: Monday-Friday 7:30-10 a.m.</p>
                         </div>
                         <div class="modal-body">
                             <form name="form" class="form-horizontal" role="form" novalidate>
@@ -99,10 +100,21 @@
                                 <!--breakfast-->
                                 <div class="form-group">
                                     <label for="breakfast" class="col-sm-2 control-label">Breakfast</label>
-                                    <div class="col-sm-10" ng-repeat="food in motosurf">
-                                        <br/>
-                                        {{food.item}} - {{food.price | currency}}
-                                        {{food.description}}
+                                    <div id="test" class="col-md-12" ng-repeat="m in motosurf | filter: {type:'entree'}" ng-click="additem(s)">
+                                        <dl>
+                                            <dt>{{m.item}}<p style="float: right;">{{m.price | currency : '$' : 2}}</p></dt>
+                                            <dd>{{m.description}}</dd>
+                                        </dl>
+                                    </div>
+
+                                    <label for="lunch" class="col-sm-2 control-label">Sides</label>
+                                    <div id="test" class="col-sm-10" ng-repeat="m in motosurf | filter: {type:'sides'}" ng-click="additem(s)">
+                                        <dd>{{m.item}}<p style="float: right;">{{m.price | currency : '$' : 2}}</p></dt>
+                                    </div>
+
+                                    <label for="lunch" class="col-sm-2 control-label">Drinks</label>
+                                    <div class="col-sm-5" ng-repeat="m in motosurf | filter: {type:'drinks'}" ng-click="additem(s)">
+                                        <dd>{{m.item}}<p style="float: right;">{{m.price | currency : '$' : 2}}</p></dd>
                                     </div>
                                 </div>
 
@@ -144,14 +156,37 @@
 
                                 <!--lunch-->
                                 <div class="form-group">
-                                    <label for="lunch" class="col-sm-2 control-label">Lunch</label>
-                                    <div class="col-sm-10" ng-repeat="food in siganos">
-                                        <br/>
-                                        {{food.item}} - {{food.price | currency}}
-                                        {{food.description}}
+                                    <label for="lunch" class="col-sm-2 control-label">Entree</label>
+                                    <div class="col-md-5" ng-repeat="s in siganos | filter: {type:'entree'}" ng-click="additem(s)">
+                                        <dl>
+                                            <dt>{{s.item}}<p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
+                                            <dd>{{s.description}}</dd>
+                                        </dl>
+                                    </div>
+
+                                    <label for="lunch" class="col-sm-2 control-label">Meats</label>
+                                    <div class="col-sm-5" ng-repeat="s in siganos | filter: {type:'meats'}" ng-click="additem(s)">
+                                        <dd>{{s.item}}</dd>
+                                    </div>
+
+                                    <label for="lunch" class="col-sm-2 control-label">Sides</label>
+                                    <div id="test" class="col-sm-12" ng-repeat="s in siganos | filter: {type:'sides'}" ng-click="additem(s)">
+                                        <dd>{{s.item}}<p style="float: right;">{{s.price | currency : '$' : 2}}</p></dt>
+                                    </div>
+
+                                    <label for="lunch" class="col-sm-2 control-label">Daily Special</label>
+                                    <div class="col-md-10 food">
+                                        <dl>
+                                            <dt>Item Name<p style="float: right;">$5.00</p></dt>
+                                            <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dicta excepturi exercitationem in maxime molestiae nostrum quaerat. Alias animi assumenda, dolore doloribus est ex, omnis quam repellat repudiandae voluptatibus voluptatum.</dd>
+                                        </dl>
+                                    </div>
+
+                                    <label for="lunch" class="col-sm-2 control-label">Cold Drinks</label>
+                                    <div class="col-sm-5" ng-repeat="s in siganos | filter: {type:'drinks'}" ng-click="additem(s)">
+                                        <dd>{{s.item}}<p style="float: right;">{{s.price | currency : '$' : 2}}</p></dd>
                                     </div>
                                 </div>
-
 
                                 <!--Special Requesets-->
                                 <div class="form-group">
@@ -191,12 +226,12 @@
 
                                 <!--food items-->
                                 <div class="form-group">
-                                    <label for="lunch" class="col-sm-2 control-label">Lunch</label>
-                                    <div class="col-sm-10" ng-repeat="food in siganos">
-                                        <br/>
-                                        {{food.item}} - {{food.price | currency}}
-                                        {{food.description}}
+                                    <label for="lunch" class="col-sm-2 control-label">Meats</label>
+                                    <div class="col-sm-5" ng-repeat="r in redsquarebbq | filter: {type:'meats'}" ng-click="additem(s)">
+                                        <dd>{{r.item}}</dd>
                                     </div>
+
+
                                 </div>
 
                                 <!--Special Requesets-->

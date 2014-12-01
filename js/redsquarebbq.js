@@ -2,27 +2,27 @@
 var redsquarebbq = [
     {
         item: 'Pulled Pork',
-        type: 'Meat'
+        type: 'meats'
     },
     {
         item: 'BBQ Chicken',
-        type: 'Meat'
+        type: 'meats'
     },
     {
         item: 'Sliced Brisket',
-        type: 'Meat'
+        type: 'meats'
     },
     {
         item: 'Honey BBQ Sauce',
-        type: 'Sauce'
+        type: 'sauce'
     },
     {
         item: 'Spicy BBQ Sauce',
-        type: 'Sauce'
+        type: 'sauce'
     },
     {
         item: 'Carolina Mustard Sauce',
-        type: 'Sauce'
+        type: 'sauce'
     },
     {
         item: 'Gluten-Free BBQ Plate',
@@ -55,79 +55,79 @@ var redsquarebbq = [
     {
         item: 'Ranch Potato Salad',
         price: 1.50,
-        type: 'Sides',
+        type: 'sides',
         truck: 'redsquarebbq'
     },
     {
         item: 'BBQ Beans',
         price: 1.50,
-        type: 'Sides',
+        type: 'sides',
         truck: 'redsquarebbq'
     },
     {
         item: 'Mac and Cheese',
         price: 2.00,
-        type: 'Sides',
+        type: 'sides',
         truck: 'redsquarebbq'
     },
     {
         item: 'House Slaw',
         price: 1.50,
-        type: 'Sides',
+        type: 'sides',
         truck: 'redsquarebbq'
     },
     {
         item: 'Hand Fried Salt and Pepper Potato Chips',
         price: 0.99,
-        type: 'Sides',
+        type: 'sides',
         truck: 'redsquarebbq'
     },
     {
         item: 'Coke',
         price: 1.05,
-        type: 'Drinks',
+        type: 'drinks',
         truck: 'redsquarebbq'
     },
     {
         item: 'Diet Coke',
         price: 1.05,
-        type: 'Drinks',
+        type: 'drinks',
         truck: 'redsquarebbq'
     },
     {
         item: 'Coke Zero',
         price: 1.05,
-        type: 'Drinks',
+        type: 'drinks',
         truck: 'redsquarebbq'
     },
     {
         item: 'Sprite',
         price: 1.05,
-        type: 'Drinks',
+        type: 'drinks',
         truck: 'redsquarebbq'
     },
     {
         item: 'Lemonade',
         price: 1.05,
-        type: 'Drinks',
+        type: 'drinks',
         truck: 'redsquarebbq'
     },
     {
         item: 'Grape Fanta',
         price: 1.05,
-        type: 'Drinks',
+        type: 'drinks',
         truck: 'redsquarebbq'
     },
     {
         item: 'Orange Fanta',
         price: 1.05,
-        type: 'Drinks',
+        type: 'drinks',
         truck: 'redsquarebbq'
     },
     {
         item: 'Water',
         price: 1.05,
-        type: 'Drinks',
+        type: 'drinks',
         truck: 'redsquarebbq'
     }
 ];
