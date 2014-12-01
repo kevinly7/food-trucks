@@ -46,6 +46,7 @@ body {
 	background-color: #4b2e83;
 	padding: 0.5em;
 	text-align: center;
+	margin-bottom: 1em;
 }
 
 header {
@@ -139,13 +140,17 @@ li {
 }
 
 .navbar {
-    background: rgba(0,0,0,.7);
+    background: rgba(0,0,0,1);
 }
 
 #how-it-works, #about { 
 	text-align: center;
 }
 
+th, td {
+    text-align: center; 
+    vertical-align: middle; 
+}
 
 /*if bigger screen do this*/
 @media (min-width: 992px) {
@@ -208,4 +213,9 @@ li {
 	.checkout-button { 
 		text-align: center;
 	}
+
+	#running-total { 
+		float: right;
+	}
+
 }
