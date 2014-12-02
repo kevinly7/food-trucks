@@ -65,3 +65,20 @@ angular.module('FoodApp', [])
         $scope.refreshItems();
 
     });
+
+//scroll to each section 
+$(document).ready(function() {
+    $('nav a, p a[href ="#header"]').click(function(eventObject) { ///need to fix this line 
+        console.log(this.hash);
+        var targetElement = jQuery(this.hash); //#about #how-it-works
+        $('html, body').animate({
+            scrollTop: targetElement.offset().top - navHeight
+        }, 700);
+        eventObject.preventDefault(); //tells page not to do default behavior b/c we are going to animate it ourselves
+    });
+
+    var nav = $('nav');
+    var navTop = nav.offset().top;
+    var navHeight = nav.outerHeight();
+
+});

@@ -124,7 +124,6 @@ nav ul a:hover, input:focus {
 }
 
 nav li {
-
 	display: inline-block;
 	margin-right: 1em;
 }
@@ -151,6 +150,7 @@ th, td {
     text-align: center; 
     vertical-align: middle; 
 }
+
 
 /*if bigger screen do this*/
 @media (min-width: 992px) {
@@ -210,12 +210,18 @@ th, td {
 		display: inline-block;
 	}
 
+	.btn { 
+	    background: transparent;
+	    border-color: white;
+	}
+
 	.checkout-button { 
-		text-align: center;
+		border: none;
 	}
 
 	#running-total { 
 		float: right;
 	}
+
 
 }
