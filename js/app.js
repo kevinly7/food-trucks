@@ -40,6 +40,13 @@ angular.module('FoodApp', [])
             $http.get(itemsUrl)
                 .success(function (data) {
                     $scope.items = data.results;
+                    var cost = 0;
+                    console.log(data.results);
+                    data.results.forEach( function (item) {
+                        cost += item.price
+                    })
+                    console.log(cost);
+                    document.getElementById('subtotal').innerHTML = '$' + cost;
                 })
                 .error(function (err) {
                     $scope.errorMessage = err;
