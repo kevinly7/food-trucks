@@ -26,94 +26,105 @@ var hotdawgs = [
     },
     {
         item: 'Balsamic Grilled Onion Relish',
-        type: 'signatureTopping'
+        type: 'signatureTopping',
+        price: 0.00
     },
     {
         item: 'Fresh Pickle Relish',
-        type: 'signatureTopping'
+        type: 'signatureTopping',
+        price: 0.00
     },
     {
         item: 'Cream Cheese',
-        type: 'signatureTopping'
+        type: 'signatureTopping',
+        price: 0.00
     },
     {
         item: 'Grilled Onion',
-        type: 'signatureTopping'
+        type: 'signatureTopping',
+        price: 0.00
     },
     {
         item: 'Sauerkraut',
-        type: 'signatureTopping'
+        type: 'signatureTopping',
+        price: 0.00
     },
     {
         item: 'Jalapeno',
-        type: 'selfTopping'
+        type: 'selfTopping',
+        price: 0.00
     },
     {
         item: 'Fresh Chopped Onions',
-        type: 'selfTopping'
+        type: 'selfTopping',
+        price: 0.00
     },
     {
         item: 'Sweet Relish',
-        type: 'selfTopping'
+        type: 'selfTopping',
+        price: 0.00
     },
     {
         item: 'Yellow Mustard',
-        type: 'selfTopping'
+        type: 'selfTopping',
+        price: 0.00
     },
     {
         item: 'Dijon Mustard',
-        type: 'selfTopping'
+        type: 'selfTopping',
+        price: 0.00
     },
     {
         item: 'Ketchup',
-        type: 'selfTopping'
+        type: 'selfTopping',
+        price: 0.00
     },
     {
         item: 'Coke',
         price: 1.05,
         type: 'drinks',
-        truck: 'redsquarebbq'
+        truck: 'hotdawgs'
     },
     {
         item: 'Diet Coke',
         price: 1.05,
         type: 'drinks',
-        truck: 'redsquarebbq'
+        truck: 'hotdawgs'
     },
     {
         item: 'Coke Zero',
         price: 1.05,
         type: 'drinks',
-        truck: 'redsquarebbq'
+        truck: 'hotdawgs'
     },
     {
         item: 'Sprite',
         price: 1.05,
         type: 'drinks',
-        truck: 'redsquarebbq'
+        truck: 'hotdawgs'
     },
     {
         item: 'Lemonade',
         price: 1.05,
         type: 'drinks',
-        truck: 'redsquarebbq'
+        truck: 'hotdawgs'
     },
     {
         item: 'Grape Fanta',
         price: 1.05,
         type: 'drinks',
-        truck: 'redsquarebbq'
+        truck: 'hotdawgs'
     },
     {
         item: 'Orange Fanta',
         price: 1.05,
         type: 'drinks',
-        truck: 'redsquarebbq'
+        truck: 'hotdawgs'
     },
     {
         item: 'Water',
         price: 1.05,
         type: 'drinks',
-        truck: 'redsquarebbq'
+        truck: 'hotdawgs'
     }
 ];
