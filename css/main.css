@@ -42,6 +42,12 @@ body {
 	color: black;
 }
 
+.bg-success {
+	background-color: #61B329;
+	padding: 1em;
+	display: none;
+}
+
 #header, footer, .uw-purple { 
 	background-color: #4b2e83;
 	padding: 0.5em;

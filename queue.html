@@ -45,6 +45,12 @@
                 </div>
             </section>
 
+            <div class="container">
+                <div class="col-sm-8">
+                    <p id="success-order" class="bg-success">Your order is being processed. We will notify you when it's ready for pick-up.</p>
+                </div>
+            </div>
+
             <section id="main" ng-app="FoodApp" ng-controller="FoodController">
                 <div class="container">
                     <div class="well col-sm-4 checkout" id="running-total"> 
@@ -65,18 +71,48 @@
                                 <th>Total</th>
                                 <td id="total"></td>
                             </tr>
-                            <tr>
-                                <th>Special Requests</th>
-                                <td>
-                                    <div id="test4" ng-class="{ 'has-error' : form.comment.$invalid && !form.comment.$pristine }">
-                                        <textarea class="form-control" name="comment" rows="3" placeholder="Do you have any special requests?" ng-model="newComment.comment" required></textarea>
-                                    </div>
-                                </td>
-                            </tr>
                         </table>
 
                         <div class="btn">
-                             <button class="btn checkout-button" ng-click="asdfsdf()">Checkout</button>
+                             <button class="btn checkout-button" ng-click="asdfsdf()" data-toggle="modal" data-target="#checkout-modal">Checkout</button>
+
+                            <!-- Modal for checkout-->
+                            <div class="modal fade" id="checkout-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h3 class="modal-title" id="myModalLabel">Preparing to send off your order to the chefs!</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal" role="form">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" id="inputEmail3" placeholder="Your full name">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputPassword3" class="col-sm-2 control-label">Phone Number</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="number" class="form-control" id="inputPassword3" placeholder="Your phone number">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputrequest3" class="col-sm-2 control-label">Special Requests</label>
+                                                    <div class="col-sm-10">
+                                                        <textarea class="form-control" rows="3" placeholder="Any special requests?"></textarea>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default uw-yellow" data-dismiss="modal">Close</button>
+                                            <button type="submit" id="submit-order" class="btn btn-primary uw-purple" ng-click="" ng-disabled="" data-dismiss="modal"   >Submit Order</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
