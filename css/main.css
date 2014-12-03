@@ -121,8 +121,8 @@ img {
 }
 
 nav ul {
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 }
 
 nav ul a:hover, input:focus {
@@ -247,6 +247,4 @@ th, td {
 	#running-total {
 		float: right;
 	}
-
-
 }
