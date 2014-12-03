@@ -165,6 +165,12 @@ th, td {
     cursor: pointer;
 }
 
+.img-thumbnail {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 .item:hover {
     background-color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
