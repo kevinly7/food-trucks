@@ -59,9 +59,9 @@ angular.module('FoodApp', [])
                 });
         };
 
-        document.getElementById('submit-order').addEventListener('click', function() {
-            document.getElementById('success-order').style.display = 'block';
-        });
+        //document.getElementById('submit-order').addEventListener('click', function() {
+        //    document.getElementById('success-order').style.display = 'block';
+        //});
 
         $scope.deleteitem = function (item) {
             $http.delete(itemsUrl + '/' + item.objectId)
