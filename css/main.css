@@ -151,6 +151,15 @@ th, td {
     vertical-align: middle; 
 }
 
+.img-thumbnail:hover {
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
 
 /*if bigger screen do this*/
 @media (min-width: 992px) {
