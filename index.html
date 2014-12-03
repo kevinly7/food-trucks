@@ -232,20 +232,20 @@
                                 <div class="col-sm-12">
                                     <!--spike it-->
                                     <div class="form-group">
-                                        <div>
-                                            <label for="meat" class="control-label"><h2 style="color:#003366">SPIKE IT! $2</h2></label>
-                                            <dl class="item">
-                                                <dt>Add a Hot Link to any sandwich</dt>
+                                        <div class="item" ng-repeat="r in redsquarebbq | filter: {type:'addon'}" ng-click="additem(r)">
+                                            <label for="meat" class="control-label"><h2 style="color:#003366">{{r.item}} {{r.price | currency : '$' : 2}}</h2></label>
+                                            <dl>
+                                                <dt>{{r.description}}</dt>
                                             </dl>
                                         </div>
                                     </div>
 
                                     <!--make it a combo-->
                                     <div class="form-group">
-                                        <div>
-                                            <label for="meat" class="control-label"><h2 style="color:#003366">MAKE IT A COMBO $2</h2></label>
-                                            <dl class="item">
-                                                <dt>Add a side and a drink (add $.50 for mac & cheese)<dt>
+                                        <div class="item" ng-repeat="r in redsquarebbq | filter: {type:'combo'}" ng-click="additem(r)">
+                                            <label for="meat" class="control-label"><h2 style="color:#003366">{{r.item}} {{r.price | currency : '$' : 2}}</h2></label>
+                                            <dl>
+                                                <dt>{{r.description}}<dt>
                                             </dl>
                                         </div>
                                     </div>
