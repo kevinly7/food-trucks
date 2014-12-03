@@ -152,9 +152,13 @@ li {
 	text-align: center;
 }
 
-th, td {
-    text-align: left;
-    vertical-align: middle; 
+th, td { 
+	text-align: center;
+	vertical-align: middle; 
+}
+
+.item-center { 
+	text-align: center;
 }
 
 .img-thumbnail:hover {

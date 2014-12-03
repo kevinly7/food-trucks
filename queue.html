@@ -82,33 +82,33 @@
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                            <h3 class="modal-title" id="myModalLabel">Preparing to send off your order to the chefs!</h3>
+                                            <h3 class="modal-title" id="myModalLabel">Preparing your order!</h3>
                                         </div>
                                         <div class="modal-body">
                                             <form class="form-horizontal" role="form">
                                                 <div class="form-group">
-                                                    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                                                    <label for="inputEmail3" class="col-sm-5 control-label">Name</label>
                                                     <div class="col-sm-5">
-                                                        <input type="text" class="form-control" id="inputEmail3" placeholder="Your full name">
+                                                        <input type="text" class="form-control" id="inputEmail3" placeholder="Full Name">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="inputPassword3" class="col-sm-2 control-label">Phone Number</label>
+                                                    <label for="inputPassword3" class="col-sm-5 control-label">Phone Number</label>
                                                     <div class="col-sm-5">
-                                                        <input type="number" class="form-control" id="inputPassword3" placeholder="Your phone number">
+                                                        <input type="tel" class="form-control" id="inputPassword3" placeholder="Phone Number">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="inputrequest3" class="col-sm-2 control-label">Special Requests</label>
-                                                    <div class="col-sm-10">
+                                                    <label for="inputrequest3" class="col-sm-5 control-label">Comments</label>
+                                                    <div class="col-sm-5">
                                                         <textarea class="form-control" rows="3" placeholder="Any special requests?"></textarea>
                                                     </div>
                                                 </div>
                                             </form>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default uw-yellow" data-dismiss="modal">Close</button>
-                                            <button type="submit" id="submit-order" class="btn btn-primary uw-purple" ng-click="" ng-disabled="" data-dismiss="modal"   >Submit Order</button>
+                                            <button type="button" class="btn btn-default uw-yellow item-center" data-dismiss="modal">Close</button>
+                                            <!-- <button type="submit" id="submit-order" class="btn btn-primary uw-purple" ng-click="" ng-disabled="" data-dismiss="modal"   >Submit Order</button> -->
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@
                                     <td>{{item.item}}</td>
                                     <td>1</td>
                                     <td>{{item.price | currency : '$' : 2}}</td>
-                                    <td><button type="submit" class="btn btn-primary" ng-click="deleteitem(item)">x</button></td>
+                                    <td class="item-center"><button type="submit" class="btn btn-primary" ng-click="deleteitem(item)">x</button></td>
                                 </tr>
                             </tbody>
                         </table>
