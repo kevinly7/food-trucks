@@ -51,7 +51,7 @@
             </section>
 
             <section id="menus">
-                <div class="row">
+                <div class="container">
                     <h2>Start by selecting a food truck below: </h2>
                 </div>
                 <div class="container">
@@ -124,16 +124,6 @@
                                             <dl class="item">
                                                 <dt>{{m.item}}<p style="float: right;">{{m.price | currency : '$' : 2}}</p></dt>
                                             </dl>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!--Special Requests-->
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <label for="comment" id="comment" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Special Requests</h2></label>
-                                        <div id="test4" class="col-sm-12" ng-class="{ 'has-error' : form.comment.$invalid && !form.comment.$pristine }">
-                                            <textarea class="form-control" name="comment" rows="3" placeholder="Do you have any special requests?" ng-model="newComment.comment" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -218,16 +208,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <!--Special Requests-->
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <label for="comment" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Special Requests</h2></label>
-                                        <div class="col-sm-12" ng-class="{ 'has-error' : form.comment.$invalid && !form.comment.$pristine }">
-                                            <textarea class="form-control" name="comment" rows="3" placeholder="Do you have any special requests?" ng-model="newComment.comment" required></textarea>
-                                        </div>
-                                    </div>
-                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -251,10 +231,12 @@
 
                                 <div class="col-sm-12">
                                     <!--spike it-->
-                                    <div class="form-group col-sm-6">
+                                    <div class="form-group">
                                         <div>
                                             <label for="meat" class="control-label"><h2 style="color:#003366">SPIKE IT! $2</h2></label>
-                                            <p>Add a Hot Link to any sandwich</p>
+                                            <dl class="item">
+                                                <dt>Add a Hot Link to any sandwich</dt>
+                                            </dl>
                                         </div>
                                     </div>
 
@@ -262,40 +244,50 @@
                                     <div class="form-group">
                                         <div>
                                             <label for="meat" class="control-label"><h2 style="color:#003366">MAKE IT A COMBO $2</h2></label>
-                                            <p>Add a side and a drink (add $.50 for mac & cheese)</p>
+                                            <dl class="item">
+                                                <dt>Add a side and a drink (add $.50 for mac & cheese)<dt>
+                                            </dl>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-sm-12">
+                                <div class="form-group col-sm-12">
                                     <!--food item-->
-                                    <div class="col-sm-6">
-                                        <label for="sanwiches" class="col-sm-2 control-label"><h2 style="color:#003366">Sandwiches</h2></label>
-                                        <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'sandwich'}" ng-click="additem(r)">
+                                    <div class="col-sm-4" style="text-align: center">
+                                        <label for="sandwiches" class="control-label"><h2 style="color:#003366">Sandwiches</h2></label>
+                                        <div ng-repeat="r in redsquarebbq | filter: {type:'sandwich'}" ng-click="additem(r)">
                                             <dl class="item">
-                                                <dd>{{r.item}}<p style="float: right;">{{r.price | currency : '$' : 2}}</p></dd>
+                                                <dd>
+                                                    {{r.item}}<p>{{r.price | currency : '$' : 2}}</p>
+                                                </dd>
                                             </dl>
                                         </div>
                                     </div>
 
                                     <!--meats-->
-                                    <div class="col-sm-6">
-                                        <label for="meat" class="col-sm-2 control-label"><h2 style="color:#003366">Meats</h2></label>
-                                        <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'meats'}" ng-click="additem(r)">
-                                            <dd class="item">{{r.item}}</dd>
+                                    <div class="col-sm-4" style="text-align: center">
+                                        <label for="meat" class="control-label"><h2 style="color:#003366">Meats</h2></label>
+                                        <div ng-repeat="r in redsquarebbq | filter: {type:'meats'}" ng-click="additem(r)">
+                                            <dl class="item">
+                                                <dd>
+                                                    {{r.item}}
+                                                </dd>
+                                            </dl>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <label for="sauce" class="col-sm-2 control-label"><h2 style="color:#003366">Sauces</h2></label>
+                                    <!--sauces-->
+                                    <div class="col-sm-4" style="text-align: center">
+                                        <label for="sauce" class="control-label"><h2 style="color:#003366">Sauces</h2></label>
                                         <div class="col-sm-12" ng-repeat="r in redsquarebbq | filter: {type:'sauce'}" ng-click="additem(r)">
-                                            <dd>{{r.item}}</dd>
+                                            <dl class="item">
+                                                <dd>
+                                                    {{r.item}}
+                                                </dd>
+                                            </dl>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!--sauces-->
-
 
                                 <!--house specials-->
                                 <div class="form-group">
@@ -327,16 +319,6 @@
                                             <dl class="item">
                                                 <dt>{{r.item}}<p style="float: right;">{{r.price | currency : '$' : 2}}</p></dt>
                                             </dl>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!--Special Requests-->
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <label for="special" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Special Requests</h2></label>
-                                        <div class="col-sm-12" ng-class="{ 'has-error' : form.comment.$invalid && !form.comment.$pristine }">
-                                            <textarea class="form-control" name="comment" rows="3" placeholder="Do you have any special requests?" ng-model="newComment.comment" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -404,16 +386,6 @@
                                             <dl class="item">
                                                 <dt>{{d.item}}<p style="float: right;">{{d.price | currency : '$' : 2}}</p></dt>
                                             </dl>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!--Special Requests-->
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <label for="comment" class="col-sm-2 control-label"><h2 style="color:#003366; text-align: left;">Special Requests</h2></label>
-                                        <div class="col-sm-12" ng-class="{ 'has-error' : form.comment.$invalid && !form.comment.$pristine }">
-                                            <textarea class="form-control" name="comment" rows="3" placeholder="Do you have any special requests?" ng-model="newComment.comment" required></textarea>
                                         </div>
                                     </div>
                                 </div>

@@ -147,7 +147,7 @@ li {
 }
 
 th, td {
-    text-align: center; 
+    text-align: left;
     vertical-align: middle; 
 }
 
@@ -220,15 +220,15 @@ th, td {
 	}
 
 	.btn { 
-	    background: transparent;
-	    border-color: white;
+	    background: white;
+	    color: #85754d;
 	}
 
 	.checkout-button { 
 		border: none;
 	}
 
-	#running-total { 
+	#running-total {
 		float: right;
 	}
 

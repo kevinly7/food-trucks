@@ -43,10 +43,13 @@ angular.module('FoodApp', [])
                     var cost = 0;
                     console.log(data.results);
                     data.results.forEach( function (item) {
-                        cost += item.price
-                    })
+                        cost += item.price;
+                        cost = Math.ceil(cost * 100) / 100;
+                    });
                     console.log(cost);
+                    var total = Math.ceil(cost * 1.10 * 100) / 100;
                     document.getElementById('subtotal').innerHTML = '$' + cost;
+                    document.getElementById('total').innerHTML = '$' + total;
                 })
                 .error(function (err) {
                     $scope.errorMessage = err;
