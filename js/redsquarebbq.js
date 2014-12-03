@@ -1,6 +1,20 @@
 
 var redsquarebbq = [
     {
+        item: 'SPIKE IT!',
+        price: 2.00,
+        type: 'addon',
+        description: 'Add a Hot Link to any sandwich',
+        truck: 'redsquarebbq'
+    },
+    {
+        item: 'MAKE IT A COMBO',
+        price: 2.00,
+        type: 'combo',
+        description: 'Add a side and a drink (add $.50 for mac & cheese)',
+        truck: 'redsquarebbq'
+    },
+    {
         item: 'BBQ Sandwich',
         price: 5.95,
         type: 'sandwich',
