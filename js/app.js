@@ -40,16 +40,14 @@ angular.module('FoodApp', [])
             $http.get(itemsUrl)
                 .success(function (data) {
                     $scope.items = data.results;
-                    var cost = 0;
+                    var subtotal = 0;
                     console.log(data.results);
                     data.results.forEach( function (item) {
-                        cost += item.price;
-                        cost = Math.ceil(cost * 100) / 100;
+                        subtotal += (item.price);
                     });
-                    console.log(cost);
-                    var total = Math.ceil(cost * 1.10 * 100) / 100;
-                    document.getElementById('subtotal').innerHTML = '$' + cost;
-                    document.getElementById('total').innerHTML = '$' + total;
+                    var total = subtotal * 1.10;
+                    document.getElementById('subtotal').innerHTML = '$' + subtotal.toFixed(2);
+                    document.getElementById('total').innerHTML = '$' + total.toFixed(2);
                 })
                 .error(function (err) {
                     $scope.errorMessage = err;
