@@ -102,11 +102,11 @@ img {
 	padding-bottom: 1em;
 }
 
-#how-it-works, .well, .table-striped > tbody > tr:nth-child(even) { 
+#how-it-works, .well, .table-striped > tbody { 
  	background-color: #b7a57a;;
 }
 
-#about, .checkout, .table-striped > tbody > tr:nth-child(odd) { 
+#about, .checkout, .table-striped > tbody { 
 	background-color: #85754d;
 }
 

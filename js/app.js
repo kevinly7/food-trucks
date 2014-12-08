@@ -89,6 +89,22 @@ $(document).ready(function() {
         eventObject.preventDefault(); //tells page not to do default behavior b/c we are going to animate it ourselves
     });
 
+    // $('button').click(function() {
+    //     $messageCont = $('<div class="message_cont">');
+    //     $message = $('<div>This has been added to your cart!</div>').hide();
+    //     $messageCont.append($message);
+    //     $('modal-dialog').prepend($messageCont);
+    //     $message.fadeIn(400, function() {
+    //         setTimeout(function(){
+    //             $messageCont.fadeOut(f;
+    //         }, 3000)
+    //     })
+    // });
+
+    $(".item").on("click", function() {
+        $(this).css("background", "grey");
+    });
+    
     var nav = $('nav');
     var navTop = nav.offset().top;
     var navHeight = nav.outerHeight();
