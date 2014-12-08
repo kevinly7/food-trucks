@@ -89,24 +89,29 @@ $(document).ready(function() {
         eventObject.preventDefault(); //tells page not to do default behavior b/c we are going to animate it ourselves
     });
 
-    // $('button').click(function() {
-    //     $messageCont = $('<div class="message_cont">');
-    //     $message = $('<div>This has been added to your cart!</div>').hide();
-    //     $messageCont.append($message);
-    //     $('modal-dialog').prepend($messageCont);
-    //     $message.fadeIn(400, function() {
-    //         setTimeout(function(){
-    //             $messageCont.fadeOut(f;
-    //         }, 3000)
-    //     })
+    // below is broken code for a cooler alert that fades in and out
+
+    // $(".item").on("click", function() {
+    //     $(this).css("background", "grey");
+    //     alert("OMG");
+    //     // $messageCont = $('<div class="message_cont">');
+    //     // $message = $('<div>This has been added to your cart!</div>');
+    //     // alert("message");
+    //     // $messageCont.append($message);
+    //     // $(this).append($messageCont);
+    //     // $message.fadeIn(400, function() {
+    //     //     setTimeout(function(){
+    //     //         // $messageCont.fadeOut(f;
+    //     //     }, 1000)
+    //     // })
     // });
 
-    $(".item").on("click", function() {
+    $(".item").on("click", function() { 
         $(this).css("background", "grey");
-    });
-    
+        alert("This has been added to your orders! Click on 'My Orders' to view what you've ordered so far. If you wish to remove something from your orders, you must do so from the My Orders page.");
+    }); 
+
     var nav = $('nav');
     var navTop = nav.offset().top;
     var navHeight = nav.outerHeight();
-
 });
