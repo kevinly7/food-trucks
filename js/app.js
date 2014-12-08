@@ -85,36 +85,39 @@ angular.module('FoodApp', [])
 
     });
 
+//scroll to each section 
 $(document).ready(function() {
-    //scrolls user to the top from bottom of screen 
-    $('.scrollToTop').click(function(eventObject){
-        $('html, body').animate({
-            scrollTop : 0
-        }, 700);
+    // scrolls user to the top from bottom of screen 
+       $('.scrollToTop').click(function(eventObject){
+             $('html, body').animate({
+                scrollTop : 0
+             }, 700);
+             eventObject.preventDefault();
+         });
+
+    //scrolls user to different sections 
+    $('nav a').click(function(eventObject) {
+        var targetElement = jQuery(this.hash); 
+         $('html, body').animate({
+          scrollTop: targetElement.offset().top - navHeight
+         }, 700);
         eventObject.preventDefault(); 
+     });
+
+    document.getElementById('submit-order').addEventListener('click', function() {
+        document.getElementById('success-order').style.display = 'block';
+        setTimeout(function() {
+            //document.getElementById('success-order').style.display = 'none';
+            $('#success-order').fadeOut("slow");
+        }, 3000);
     });
 
-    //animated scroll tos ections 
-    $('nav a, p').click(function(eventObject) { 
-        $('html, body').animate({
-            scrollTop: 0
-        }, 700);
-        eventObject.preventDefault(); 
-    });
+     var nav = $('nav');
+     var navTop = nav.offset().top;
+     var navHeight = nav.outerHeight();
 
     //alerts user that their item has been added to the cart 
     $(".item").on("click", function() { 
         alert("This has been added to your orders! Click on 'My Orders' to view what you've ordered so far. If you wish to remove something from your orders, you must do so from the My Orders page.");
-    }); 
-
-    var nav = $('nav');
-    var navTop = nav.offset().top;
-    var navHeight = nav.outerHeight();
-
-    document.getElementById('submit-order').addEventListener('click', function() {
-        document.getElementById('#success-order').style.display = 'block';
-        setTimeout(function() {
-            $('#success-order').fadeOut("slow");
-        }, 3000);
-    });
+    }); ;
 });
