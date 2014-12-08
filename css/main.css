@@ -17,14 +17,6 @@ body {
 	text-align: center;
 }
 
-.table-striped > tbody > tr:nth-child(even) { 
-	background-color: #444444;
-}
-
-.table-striped > tbody > tr:nth-child(odd) { 
-	background-color: #d9d9d9;
-}
-
 .full-width {
 	margin: 0 auto;
 	width: 100%;

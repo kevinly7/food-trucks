@@ -20,6 +20,7 @@ angular.module('FoodApp', [])
         $scope.motosurf = motosurf;
         $scope.redsquarebbq = redsquarebbq;
 
+        //adds item to "my orders" 
         $scope.additem = function (item) {
             $scope.loading = true;
             $http.post(itemsUrl, item)
@@ -35,6 +36,10 @@ angular.module('FoodApp', [])
                 });
         };
 
+        // - increment the count of an item if is clicked and is already contained
+        //  in $scope.items array (need to traverse through $scope.items to see if we have a match)
+
+        //updates the subtotal and total price of users' orders
         $scope.refreshItems = function () {
             $scope.loading = true;
             $http.get(itemsUrl)
@@ -57,10 +62,7 @@ angular.module('FoodApp', [])
                 });
         };
 
-        //document.getElementById('submit-order').addEventListener('click', function() {
-        //    document.getElementById('success-order').style.display = 'block';
-        //});
-
+        //deletes item from the menu if the 'x' button is clicked 
         $scope.deleteitem = function (item) {
             $http.delete(itemsUrl + '/' + item.objectId)
                 .success(function (responseData) {
@@ -78,36 +80,25 @@ angular.module('FoodApp', [])
 
     });
 
-//scroll to each section 
 $(document).ready(function() {
-    $('nav a, p a[href ="#header"]').click(function(eventObject) { ///need to fix this line 
-        console.log(this.hash);
-        var targetElement = jQuery(this.hash); //#about #how-it-works
+    //scrolls user to the top from bottom of screen 
+    $('.scrollToTop').click(function(eventObject){
         $('html, body').animate({
-            scrollTop: targetElement.offset().top - navHeight
+            scrollTop : 0
         }, 700);
-        eventObject.preventDefault(); //tells page not to do default behavior b/c we are going to animate it ourselves
+        eventObject.preventDefault(); 
     });
 
-    // below is broken code for a cooler alert that fades in and out
+    //animated scroll tos ections 
+    $('nav a, p').click(function(eventObject) { 
+        $('html, body').animate({
+            scrollTop: 0
+        }, 700);
+        eventObject.preventDefault(); 
+    });
 
-    // $(".item").on("click", function() {
-    //     $(this).css("background", "grey");
-    //     alert("OMG");
-    //     // $messageCont = $('<div class="message_cont">');
-    //     // $message = $('<div>This has been added to your cart!</div>');
-    //     // alert("message");
-    //     // $messageCont.append($message);
-    //     // $(this).append($messageCont);
-    //     // $message.fadeIn(400, function() {
-    //     //     setTimeout(function(){
-    //     //         // $messageCont.fadeOut(f;
-    //     //     }, 1000)
-    //     // })
-    // });
-
+    //alerts user that their item has been added to the cart 
     $(".item").on("click", function() { 
-        $(this).css("background", "grey");
         alert("This has been added to your orders! Click on 'My Orders' to view what you've ordered so far. If you wish to remove something from your orders, you must do so from the My Orders page.");
     }); 
 
