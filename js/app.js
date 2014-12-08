@@ -94,15 +94,15 @@ $(document).ready(function() {
              }, 700);
              eventObject.preventDefault();
          });
-
-    //scrolls user to different sections 
-    $('nav a').click(function(eventObject) {
-        var targetElement = jQuery(this.hash); 
-         $('html, body').animate({
-          scrollTop: targetElement.offset().top - navHeight
-         }, 700);
-        eventObject.preventDefault(); 
-     });
+    //
+    ////scrolls user to different sections
+    //$('nav a').click(function(eventObject) {
+    //    var targetElement = jQuery(this.hash);
+    //     $('html, body').animate({
+    //      scrollTop: targetElement.offset().top - navHeight
+    //     }, 700);
+    //    eventObject.preventDefault();
+    // });
 
     document.getElementById('submit-order').addEventListener('click', function() {
         document.getElementById('success-order').style.display = 'block';
