@@ -57,10 +57,6 @@ angular.module('FoodApp', [])
                 });
         };
 
-        //document.getElementById('submit-order').addEventListener('click', function() {
-        //    document.getElementById('success-order').style.display = 'block';
-        //});
-
         $scope.deleteitem = function (item) {
             $http.delete(itemsUrl + '/' + item.objectId)
                 .success(function (responseData) {
@@ -92,5 +88,12 @@ $(document).ready(function() {
     var nav = $('nav');
     var navTop = nav.offset().top;
     var navHeight = nav.outerHeight();
+
+    document.getElementById('submit-order').addEventListener('click', function() {
+        document.getElementById('success-order').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('success-order').style.display = 'none';
+        }, 3000);
+    });
 
 });
