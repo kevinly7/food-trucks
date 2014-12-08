@@ -80,29 +80,34 @@ angular.module('FoodApp', [])
 
     });
 
-$(document).ready(function() {
-    //scrolls user to the top from bottom of screen 
-    $('.scrollToTop').click(function(eventObject){
-        $('html, body').animate({
-            scrollTop : 0
-        }, 700);
-        eventObject.preventDefault(); 
-    });
+    //scroll to each section 
+ $(document).ready(function() {
+        // $('nav a, p a[href ="#header"]').click(function(eventObject) { ///need to fix this line 
+        //     console.log(this.hash);
+        //     var targetElement = jQuery(this.hash); //#about #how-it-works
 
-    //animated scroll tos ections 
-    $('nav a, p').click(function(eventObject) { 
-        $('html, body').animate({
-            scrollTop: 0
-        }, 700);
+    // scrolls user to the top from bottom of screen 
+       $('.scrollToTop').click(function(eventObject){
+             $('html, body').animate({
+                scrollTop : 0
+             }, 700);
+             eventObject.preventDefault();
+         });
+
+    $('nav a').click(function(eventObject) {
+        var targetElement = jQuery(this.hash); 
+         $('html, body').animate({
+          scrollTop: targetElement.offset().top - navHeight
+         }, 700);
         eventObject.preventDefault(); 
-    });
+     });
+
+     var nav = $('nav');
+     var navTop = nav.offset().top;
+     var navHeight = nav.outerHeight();
 
     //alerts user that their item has been added to the cart 
     $(".item").on("click", function() { 
         alert("This has been added to your orders! Click on 'My Orders' to view what you've ordered so far. If you wish to remove something from your orders, you must do so from the My Orders page.");
     }); 
-
-    var nav = $('nav');
-    var navTop = nav.offset().top;
-    var navHeight = nav.outerHeight();
 });
