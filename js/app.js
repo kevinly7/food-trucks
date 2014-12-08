@@ -62,7 +62,7 @@ angular.module('FoodApp', [])
                 });
         };
 
-        //deletes item from the menu if the 'x' button is clicked 
+        //deletes item from the menu if the 'x' button is clicked
         $scope.deleteitem = function (item) {
             $http.delete(itemsUrl + '/' + item.objectId)
                 .success(function (responseData) {
@@ -106,5 +106,5 @@ $(document).ready(function() {
     //alerts user that their item has been added to the cart 
     $(".item").on("click", function() { 
         alert("This has been added to your orders! Click on 'My Orders' to view what you've ordered so far. If you wish to remove something from your orders, you must do so from the My Orders page.");
-    }); 
+    }); ;
 });
