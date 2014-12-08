@@ -99,6 +99,14 @@ $(document).ready(function() {
         eventObject.preventDefault(); 
      });
 
+    document.getElementById('submit-order').addEventListener('click', function() {
+        document.getElementById('success-order').style.display = 'block';
+        setTimeout(function() {
+            //document.getElementById('success-order').style.display = 'none';
+            $('#success-order').fadeOut("slow");
+        }, 3000);
+    });
+
      var nav = $('nav');
      var navTop = nav.offset().top;
      var navHeight = nav.outerHeight();
