@@ -320,7 +320,11 @@
                                     <div class="col-md-12">
                                         <label for="side" id="side" class="col-md-2 control-label"><h2 style="color:#003366">Sides</h2></label>
                                         <div class="col-md-12" ng-repeat="r in redsquarebbq | filter: {type:'sides'}" ng-click="additem(r)">
-                                            <dd class="item">{{r.item}}<p style="float: right;">{{r.price | currency : '$' : 2}}</p></dt>
+                                            <dl class="item">
+                                                <dt>{{r.item}}
+                                                    <p style="float: right;">{{r.price | currency : '$' : 2}}</p>
+                                                </dt>
+                                            </dl>
                                         </div>
                                     </div>
                                 </div>

@@ -80,12 +80,8 @@ angular.module('FoodApp', [])
 
     });
 
-    //scroll to each section 
- $(document).ready(function() {
-        // $('nav a, p a[href ="#header"]').click(function(eventObject) { ///need to fix this line 
-        //     console.log(this.hash);
-        //     var targetElement = jQuery(this.hash); //#about #how-it-works
-
+//scroll to each section 
+$(document).ready(function() {
     // scrolls user to the top from bottom of screen 
        $('.scrollToTop').click(function(eventObject){
              $('html, body').animate({
@@ -94,6 +90,7 @@ angular.module('FoodApp', [])
              eventObject.preventDefault();
          });
 
+    //scrolls user to different sections 
     $('nav a').click(function(eventObject) {
         var targetElement = jQuery(this.hash); 
          $('html, body').animate({
