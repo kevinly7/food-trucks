@@ -169,7 +169,7 @@
                                     <div class="col-md-12">
                                         <label for="meat" id="meat" class="col-md-2 control-label"><h2 style="color:#003366">Meats</h2></label>
                                         <div class="col-md-12" ng-repeat="s in siganos | filter: {type:'meats'}" ng-click="additem(s)">
-                                            <dd>{{s.item}}</dd>
+                                            <dd class="item">{{s.item}}</dd>
                                         </div>
                                     </div>
 
@@ -190,7 +190,7 @@
                                     <div class="col-md-12">
                                         <label for="daily" id="daily" class="col-md-2 control-label"><h2 style="color:#003366; text-align: left;">Daily Special</h2></label>
                                         <div class="col-md-12 food">
-                                            <dl>
+                                            <dl class="item">
                                                 <dt>Item Name<p style="float: right;">$5.00</p></dt>
                                                 <dd>
                                                     <p style="font-size: 75%; color: #336699">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -367,7 +367,7 @@
                                     <div class="col-md-12">
                                         <label for="sig-topping" id="sig-topping" class="col-md-2 control-label"><h2 style="color:#003366; text-align: left;">Signature Toppings</h2></label>
                                         <div class="col-md-12" ng-repeat="d in hotdawgs | filter: {type:'signatureTopping'}" ng-click="additem(d)">
-                                            <dl>
+                                            <dl class="item">
                                                 <dt>{{d.item}}</dt>
                                             </dl>
                                         </div>
@@ -377,7 +377,7 @@
                                 <div class="form-group">
                                     <div class="col-md-12">
                                         <label for="self-topping" id="self-topping" class="col-md-2 control-label"><h2 style="color:#003366; text-align: left;">Self Toppings</h2></label>
-                                        <div class="col-md-12" ng-repeat="d in hotdawgs | filter: {type:'selfTopping'}" ng-click="additem(d)">
+                                        <div class="col-md-12" ng-repeat="d in hotdawgs | filter: {type:'selfTopping'}">
                                             <dl>
                                                 <dt>{{d.item}}</dt>
                                             </dl>

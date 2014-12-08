@@ -48,7 +48,12 @@ angular.module('FoodApp', [])
                     var subtotal = 0;
                     console.log(data.results);
                     data.results.forEach( function (item) {
-                        subtotal += (item.price);
+                        if(item.price == null)
+                        {
+                            subtotal += 0;
+                        } else {
+                            subtotal += (item.price);
+                        }
                     });
                     var total = subtotal * 1.10;
                     document.getElementById('subtotal').innerHTML = '$' + subtotal.toFixed(2);

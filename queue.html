@@ -122,7 +122,6 @@
                                 <h2>Motosurf</h2>
                                 <tr>
                                     <th>Item</th>
-                                    <th>Quantity</th>
                                     <th>Cost ($)</th>
                                     <th>Delete</th>
                                 </tr>
@@ -130,7 +129,6 @@
                             <tbody>
                                 <tr ng-repeat="item in items | filter: {truck: 'motosurf'}">
                                     <td>{{item.item}}</td>
-                                    <td>1</td>
                                     <td>{{item.price | currency : '$' : 2}}</td>
                                     <td class="item-center"><button type="submit" class="btn btn-primary" ng-click="deleteitem(item)">x</button></td>
                                 </tr>
@@ -143,7 +141,6 @@
                                 <h2>Red Square BBQ</h2>
                                 <tr>
                                     <th>Item</th>
-                                    <th>Quantity</th>
                                     <th>Cost ($)</th>
                                     <th>Delete</th> 
                                 </tr>
@@ -151,7 +148,6 @@
                             <tbody>
                             <tr ng-repeat="item in items | filter: {truck: 'redsquarebbq'}">
                                 <td>{{item.item}}</td>
-                                <td>1</td>
                                 <td>{{item.price | currency : '$' : 2}}</td>
                                 <td><button type="submit" class="btn btn-primary" ng-click="deleteitem(item)">x</button></td>
                             </tr>
@@ -165,7 +161,6 @@
                             <h2>Hot Dawgs</h2>
                             <tr>
                                 <th>Item</th>
-                                <th>Quantity</th>
                                 <th>Cost ($)</th>
                                 <th>Delete</th> 
                             </tr>
@@ -173,7 +168,6 @@
                             <tbody>
                             <tr ng-repeat="item in items | filter: {truck: 'hotdawgs'}">
                                 <td>{{item.item}}</td>
-                                <td>1</td>
                                 <td>{{item.price | currency : '$' : 2}}</td>
                                 <td><button type="submit" class="btn btn-primary" ng-click="deleteitem(item)">x</button></td>
                             </tr>
@@ -187,7 +181,6 @@
                             <h2>Siganos</h2>
                             <tr>
                                 <th>Item</th>
-                                <th>Quantity</th>
                                 <th>Cost ($)</th>
                                 <th>Delete</th> 
                             </tr>
@@ -195,7 +188,6 @@
                             <tbody>
                             <tr ng-repeat="item in items | filter: {truck: 'siganos'}">
                                 <td>{{item.item}}</td>
-                                <td>1</td>
                                 <td>{{item.price | currency : '$' : 2}}</td>
                                 <td><button type="submit" class="btn btn-primary" ng-click="deleteitem(item)">x</button></td>
                             </tr>

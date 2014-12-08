@@ -30,38 +30,32 @@ var redsquarebbq = [
     {
         item: 'Pulled Pork',
         type: 'meats',
-        truck: 'redsquarebbq',
-        price: 0.00
+        truck: 'redsquarebbq'
     },
     {
         item: 'BBQ Chicken',
         type: 'meats',
-        truck: 'redsquarebbq',
-        price: 0.00
+        truck: 'redsquarebbq'
     },
     {
         item: 'Sliced Brisket',
         type: 'meats',
-        truck: 'redsquarebbq',
-        price: 0.00
+        truck: 'redsquarebbq'
     },
     {
         item: 'Honey BBQ Sauce',
         type: 'sauce',
-        truck: 'redsquarebbq',
-        price: 0.00
+        truck: 'redsquarebbq'
     },
     {
         item: 'Spicy BBQ Sauce',
         type: 'sauce',
-        truck: 'redsquarebbq',
-        price: 0.00
+        truck: 'redsquarebbq'
     },
     {
         item: 'Carolina Mustard Sauce',
         type: 'sauce',
-        truck: 'redsquarebbq',
-        price: 0.00
+        truck: 'redsquarebbq'
     },
     {
         item: 'Gluten-Free BBQ Plate',

@@ -24,58 +24,47 @@ var hotdawgs = [
     },
     {
         item: 'Balsamic Grilled Onion Relish',
-        type: 'signatureTopping',
-        price: 0.00
+        type: 'signatureTopping'
     },
     {
         item: 'Fresh Pickle Relish',
-        type: 'signatureTopping',
-        price: 0.00
+        type: 'signatureTopping'
     },
     {
         item: 'Cream Cheese',
-        type: 'signatureTopping',
-        price: 0.00
+        type: 'signatureTopping'
     },
     {
         item: 'Grilled Onion',
-        type: 'signatureTopping',
-        price: 0.00
+        type: 'signatureTopping'
     },
     {
         item: 'Sauerkraut',
-        type: 'signatureTopping',
-        price: 0.00
+        type: 'signatureTopping'
     },
     {
         item: 'Jalapeno',
-        type: 'selfTopping',
-        price: 0.00
+        type: 'selfTopping'
     },
     {
         item: 'Fresh Chopped Onions',
-        type: 'selfTopping',
-        price: 0.00
+        type: 'selfTopping'
     },
     {
         item: 'Sweet Relish',
-        type: 'selfTopping',
-        price: 0.00
+        type: 'selfTopping'
     },
     {
         item: 'Yellow Mustard',
-        type: 'selfTopping',
-        price: 0.00
+        type: 'selfTopping'
     },
     {
         item: 'Dijon Mustard',
-        type: 'selfTopping',
-        price: 0.00
+        type: 'selfTopping'
     },
     {
         item: 'Ketchup',
-        type: 'selfTopping',
-        price: 0.00
+        type: 'selfTopping'
     },
     {
         item: 'Coke',

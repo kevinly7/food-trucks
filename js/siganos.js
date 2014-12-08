@@ -17,23 +17,19 @@ var siganos = [
     },
     {
         item: 'Chicken Tinga',
-        type: 'meats',
-        price: 0.00
+        type: 'meats'
     },
     {
         item: 'Pork Carnitas',
-        type: 'meats',
-        price: 0.00
+        type: 'meats'
     },
     {
         item: 'Carne Asada Beef',
-        type: 'meats',
-        price: 0.00
+        type: 'meats'
     },
     {
         item: 'Vegan Gardien Chicken',
-        type: 'meats',
-        price: 0.00
+        type: 'meats'
     },
     {
         item: 'Chips And Salsa',
