@@ -88,13 +88,14 @@
                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                             <h3 class="modal-title" id="myModalLabel">Moto-Breakfast</h3>
                             <p>Hours: Monday-Friday 7:30 am - 10:00 am</p>
+
                         </div>
                         <div class="modal-body">
                             <form name="form" class="form-horizontal" role="form" novalidate>
 
                                 <!--breakfast-->
                                 <div class="form-group">
-                                    <div class="col-md-12">
+                                    <div class="col-md-12 click-this">
                                         <label for="breakfast" id="breakfast" class="col-md-2 control-label"><h2 style="color:#003366">Breakfast</h2></label>
                                         <div id="test1" class="col-md-12" ng-repeat="m in motosurf | filter: {type:'entree'}" ng-click="additem(m)">
                                             <dl class="item">
@@ -133,7 +134,6 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.location.href='queue.html'">Go to your orders</button>
-                            <!-- <button type="submit" id="submit" class="btn btn-primary uw-purple" ng-click="" ng-disabled="">Submit Order</button> -->
                         </div>
                     </div>
                 </div>
